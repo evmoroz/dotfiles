@@ -8,3 +8,10 @@
 
 # ls colored output
 alias ls='ls --color'
+
+# Use vim insted of vi
+alias vi='vim'
+
+# set vim as the default editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
