@@ -15,6 +15,7 @@ syntax on
 
 " Numbered lines
 set number
+set numberwidth=1
 
 " No compatible mode
 set nocompatible
@@ -22,3 +23,20 @@ set nocompatible
 " Spell check, because I can't type
 set spelllang=en
 set spell
+
+" Search options
+set incsearch
+set hlsearch
+
+" Limit myself to 80 chars
+set colorcolumn=80
+
+" Tabs
+set tabstop=4
+set smartindent
+
+" Cursor position
+set ruler
+
+" File name completion
+set wildmenu
