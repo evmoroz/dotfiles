@@ -6,7 +6,7 @@
 " set the background to dark
 set background=dark
 
-" Get swapfiles out of my sight
+" Get swap files out of my sight
 set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
 
@@ -19,6 +19,6 @@ set number
 " No compatible mode
 set nocompatible
 
-" Spellcheck, because I can't type
+" Spell check, because I can't type
 set spelllang=en
 set spell
