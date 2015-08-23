@@ -16,3 +16,5 @@ syntax on
 " Numbered lines
 set number
 
+" No compatible mode
+set nocompatible
