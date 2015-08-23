@@ -18,3 +18,7 @@ set number
 
 " No compatible mode
 set nocompatible
+
+" Spellcheck, because I can't type
+set spelllang=en
+set spell
