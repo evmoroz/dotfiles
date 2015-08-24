@@ -33,7 +33,8 @@ set colorcolumn=80
 
 " Tabs
 set tabstop=4
-set smartindent
+set shiftwidth=4
+filetype plugin indent on
 
 " Cursor position
 set ruler
