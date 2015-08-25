@@ -1,7 +1,27 @@
 " ttyz vimrc
 "
-" Thu, Aug 20, 2015  9:46:04 AM
-"
+" 25 Aug 2015. 12:00:16
+
+" No compatible mode
+set nocompatible
+
+" Vundle
+filetype off
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+
+call vundle#end()
+filetype plugin indent on
 
 " set the background to dark
 set background=dark
@@ -17,8 +37,6 @@ syntax on
 set number
 set numberwidth=1
 
-" No compatible mode
-set nocompatible
 
 " Spell check, because I can't type
 set spelllang=en
@@ -34,7 +52,6 @@ set colorcolumn=80
 " Tabs
 set tabstop=4
 set shiftwidth=4
-filetype plugin indent on
 
 " Cursor position
 set ruler
