@@ -53,6 +53,10 @@ set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
 
+" Make special chars visible by default
+set list
+set listchars=tab:▸\ ,eol:¬
+
 " Cursor position
 set ruler
 
