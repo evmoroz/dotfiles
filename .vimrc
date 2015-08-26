@@ -5,6 +5,9 @@
 " No compatible mode
 set nocompatible
 
+" Hide the buffers without notifying me
+set hidden
+
 " Vundle
 filetype off
 " set the runtime path to include Vundle and initialize
