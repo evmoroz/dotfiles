@@ -15,3 +15,8 @@ alias vi='vim'
 # set vim as the default editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+# Load local bashrc if there is one
+if [ -f ${HOME}/.local.bashrc ] ; then
+	source ${HOME}/.local.bashrc
+fi
