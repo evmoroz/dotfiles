@@ -5,6 +5,7 @@
 " No compatible mode
 set nocompatible
 
+
 " Hide the buffers without notifying me
 set hidden
 
@@ -37,31 +38,80 @@ set directory=~/.vim/tmp,.
 " syntax highlighting
 syntax on
 
-" Numbered lines
+" numbered lines
 set number
 set numberwidth=1
 
 
-" Spell check, because I can't type
+" spell check, because I can't type
 set spelllang=en
 set spell
 
-" Search options
+" search options
 set incsearch
 set hlsearch
+set smartcase
+set ignorecase
 
-" Limit myself to 80 chars
+" limit myself to 80 chars
 set colorcolumn=80
 
-" Tabs
+" tabs
 set tabstop=4
 set shiftwidth=4
+set smarttab
 
-" Make special chars visible
-set listchars=tab:>\ ,eol:¬
+" make special chars visible
 
-" Cursor position
+if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
+	let &listchars = "tab:\u21e5\u00b7,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+	let &fillchars = "vert:\u259a,fold:\u00b7"
+else
+	set listchars=tab:>\ ,trail:-,extends:>,precedes:<
+endif
+
+" cursor position
 set ruler
 
-" File name completion
+" file name completion
 set wildmenu
+set wildmode=longest:full,full
+
+" insert mode completion
+set completeopt=longest,menuone,preview
+
+" history
+set history=200
+
+" status line
+set laststatus=2
+set showcmd
+
+" leave some space
+set scrolloff=2
+
+" experimental. Jump to bracket
+set showmatch
+
+" stop the beeping
+set visualbell
+
+" show the title
+set title
+
+" show the cursor line only in insert mode
+augroup cline
+    au!
+	au winleave,insertenter * set cursorline
+	au WinEnter,InsertLeave * set nocursorline
+augroup END
+
+" Make sure Vim returns to the same line when you reopen a file.
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
