@@ -22,6 +22,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 filetype plugin indent on
@@ -56,9 +57,8 @@ set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
 
-" Make special chars visible by default
-set list
-set listchars=tab:▸\ ,eol:¬
+" Make special chars visible
+set listchars=tab:>\ ,eol:¬
 
 " Cursor position
 set ruler
