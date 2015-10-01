@@ -115,3 +115,8 @@ augroup line_return
         \ endif
 augroup END
 
+
+" Load local vimrc if present
+if !empty(glob("~/.local.vimrc"))
+	source ~/.local.vimrc
+endif
