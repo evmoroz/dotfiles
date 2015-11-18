@@ -12,3 +12,6 @@ vim +PluginInstall +qall
 # Copy and source the bashrc
 cp -v .bashrc ${HOME}
 source ${HOME}/.bashrc
+
+# Copy tmux config
+cp -v .tmux.conf ${HOME}
