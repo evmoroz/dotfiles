@@ -16,7 +16,7 @@ alias vi='vim'
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export PS1="\n\[\033[38;5;11m\]\u\]\[\033[38;5;15m\] \]\[\033[38;5;208m\][\w]:\]\[\033[38;5;15m\]\n\\$ "
+export PS1="\n\[\033[38;5;11m\]\u@\h\]\[\033[38;5;15m\] \]\[\033[38;5;208m\][\w]:\]\[\033[38;5;15m\]\n\\$ "
 
 # Load local bashrc if there is one
 if [ -f ${HOME}/.local.bashrc ] ; then
