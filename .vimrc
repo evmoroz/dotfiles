@@ -24,6 +24,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'joonty/vdebug'
 
 call vundle#end()
 filetype plugin indent on
