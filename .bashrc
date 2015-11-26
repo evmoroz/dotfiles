@@ -22,3 +22,8 @@ export PS1="\n\[\033[38;5;11m\]\u@\h\]\[\033[38;5;15m\] \]\[\033[38;5;208m\][\w]
 if [ -f ${HOME}/.local.bashrc ] ; then
 	source ${HOME}/.local.bashrc
 fi
+
+
+if [ -d ${HOME}/bin ] ; then
+	export PATH=${HOME}/bin:${PATH}
+fi
