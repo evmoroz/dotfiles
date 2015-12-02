@@ -23,6 +23,11 @@ if [ -f ${HOME}/.local.bashrc ] ; then
 	source ${HOME}/.local.bashrc
 fi
 
+# Add composer bin to the path if present
+COMPOSER_BIN=${HOME}/.composer/vendor/bin
+if [ -d ${COMPOSER_BIN} ] ; then
+	export PATH=${COMPOSER_BIN}:${PATH}
+fi
 
 if [ -d ${HOME}/bin ] ; then
 	export PATH=${HOME}/bin:${PATH}
