@@ -4,6 +4,16 @@
 #
 #
 
+# bash options
+shopt -s cdspell
+shopt -s extglob
+shopt -s nocaseglob
+shopt -s autocd
+shopt -s no_empty_cmd_completion
+if [[ $(uname -s) =~ ^CYGWIN* ]] ; then
+	shopt -s completion_strip_exe
+fi
+
 # Aliases
 
 # ls colored output

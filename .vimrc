@@ -37,6 +37,13 @@ set background=dark
 set backupdir=~/.vim/tmp,.
 set directory=~/.vim/tmp,.
 
+set wildignore+=tags
+set wildignore+=*/tmp/*
+set wildignore+=*/vendor/*
+set wildignore+=*.png,*.jpg,*.otf,*.woff,*.jpeg,*.orig
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux"
+set wildignore+=*.exe
+
 " syntax highlighting
 syntax on
 
