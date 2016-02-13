@@ -70,13 +70,14 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 
+set list
 " make special chars visible
-
 if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
-	let &listchars = "tab:\u21e5\u00b7,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
-	let &fillchars = "vert:\u259a,fold:\u00b7"
+	let &listchars = "tab:\u2023 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u26ad"
+	set fillchars+=vert:│
 else
 	set listchars=tab:>\ ,trail:-,extends:>,precedes:<
+	set fillchars+=vert:|
 endif
 
 " cursor position
