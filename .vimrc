@@ -47,6 +47,7 @@ set wildignore+=*.exe
 
 " syntax highlighting
 syntax on
+let g:syntastic_javascript_checkers = ['jshint'] 
 
 " numbered lines
 set number
