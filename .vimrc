@@ -133,6 +133,9 @@ if !empty(glob("~/.local.vimrc"))
 	source ~/.local.vimrc
 endif
 
+" make italic comments
+highlight Comment cterm=italic
+
 " debugger options
 let g:vdebug_options= {
 			\    "port" : 9000,
