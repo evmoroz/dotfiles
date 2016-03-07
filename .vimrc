@@ -134,7 +134,7 @@ if !empty(glob("~/.local.vimrc"))
 endif
 
 " make italic comments
-highlight Comment cterm=italic
+highlight Comment cterm=italic,bold
 
 " debugger options
 let g:vdebug_options= {
