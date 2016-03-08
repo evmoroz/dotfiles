@@ -7,6 +7,7 @@
 # bash options
 shopt -s cdspell
 shopt -s extglob
+shopt -s dirspell
 shopt -s nocaseglob
 shopt -s autocd
 shopt -s no_empty_cmd_completion
@@ -42,3 +43,14 @@ fi
 if [ -d ${HOME}/bin ] ; then
 	export PATH=${HOME}/bin:${PATH}
 fi
+
+# Better history
+shopt -s histappend
+shopt -s cmdhist
+PROMPT_COMMAND='history -a'
+HISTSIZE=500000
+HISTFILESIZE=100000
+HISTCONTROL="erasedups:ignoreboth"
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history"
+HISTTIMEFORMAT='%F %T '
+
