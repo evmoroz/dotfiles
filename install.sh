@@ -9,6 +9,9 @@ if [ ! -d ${HOME}/.vim/bundle/Vundle.vim ] ; then
 fi
 vim +PluginClean +PluginInstall +qall
 
+# create a shortcut to vim environments
+ln -sfv $(pwd)/env ${HOME}/.vim/env
+
 # Link the bashrc
 ln -sfv $(pwd)/bashrc ${HOME}/.bashrc
 
