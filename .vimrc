@@ -24,7 +24,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'joonty/vdebug'
+" Plugin 'joonty/vdebug'
 Plugin 'fatih/vim-go'
 " Plugin 'joonty/vim-phpunitqf'
 
