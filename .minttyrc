@@ -1,1 +1,24 @@
-/home/tyz/.minttyrc
+BoldAsFont=yes
+Font=Meslo LG S
+FontHeight=14
+AllowBlinking=no
+Locale=ru_RU
+Charset=UTF-8
+Transparency=low
+CursorType=line
+RightClickAction=paste
+Term=xterm-256color
+Columns=144
+Rows=48
+FontIsBold=no
+ScrollMod=shift
+Scrollbar=none
+PgUpDnScroll=yes
+BellSound=yes
+BellFlash=no
+BoldAsColour=yes
+BackgroundColour=28,28,28
+ClicksTargetApp=yes
+FontSmoothing=default
+ClickTargetMod=shift
+MiddleClickAction=extend
