@@ -79,8 +79,8 @@ if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
 	let &listchars = "tab:\u00b7 ,trail:\u2423,extends:\u276d,precedes:\u276c,nbsp:\u26ad"
 	set fillchars+=vert:│
 else
-	set listchars=tab:>_,trail:-,extends:>,precedes:<
-	set fillchars+=vert:|
+	set listchars=tab:.\ ,trail:_,extends:>,precedes:<
+	set fillchars=""
 endif
 
 " cursor position
