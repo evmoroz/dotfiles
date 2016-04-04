@@ -13,6 +13,11 @@ shopt -s autocd
 shopt -s no_empty_cmd_completion
 if [[ $(uname -s) =~ ^CYGWIN* ]] ; then
 	shopt -s completion_strip_exe
+
+	function explore {
+		EXPLORE_PATH=${1:-.}
+		explorer $(cygpath -w $EXPLORE_PATH)
+	}
 fi
 
 # Aliases
