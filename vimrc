@@ -163,3 +163,7 @@ if maparg('<C-L>', 'n') ==# ''
 endif
 
 set lazyredraw
+
+" Mose opions
+set mouse=a
+set ttymouse=xterm2
