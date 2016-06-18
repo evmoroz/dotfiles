@@ -2,6 +2,14 @@
 "
 " 25 Aug 2015. 12:00:16
 
+let mapleader=","
+let maplocalleader="\\"
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+nnoremap H ^
+nnoremap L $
+
 " No compatible mode
 set nocompatible
 
@@ -9,7 +17,7 @@ set nocompatible
 " Hide the buffers without notifying me
 set hidden
 
-" Vundle
+" Vundle {{{
 filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -28,6 +36,7 @@ Plugin 'mfukar/robotframework-vim'
 " Plugin 'joonty/vdebug'
 Plugin 'fatih/vim-go'
 " Plugin 'joonty/vim-phpunitqf'
+" }}}
 
 call vundle#end()
 filetype plugin indent on
@@ -60,11 +69,12 @@ set numberwidth=1
 set spelllang=en
 set spell
 
-" search options
+" search options {{{
 set incsearch
 set hlsearch
 set smartcase
 set ignorecase
+" }}}
 
 " limit myself to 80 chars
 set colorcolumn=80
@@ -75,7 +85,8 @@ set shiftwidth=4
 set smarttab
 
 set list
-" make special chars visible
+
+" make special chars visible {{{
 if (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8') && version >= 700
 	let &listchars = "tab:\u00b7 ,trail:\u2423,extends:\u276d,precedes:\u276c,nbsp:\u26ad"
 	set fillchars+=vert:│
@@ -83,6 +94,7 @@ else
 	set listchars=tab:.\ ,trail:_,extends:>,precedes:<
 	set fillchars=""
 endif
+" }}}
 
 " cursor position
 set ruler
@@ -97,9 +109,13 @@ set completeopt=longest,menuone,preview
 " history
 set history=200
 
-" status line
+" status line {{{
 set laststatus=2
 set showcmd
+set statusline=%f
+set statusline+=%=
+set statusline+=%y
+" }}}
 
 " leave some space
 set scrolloff=2
@@ -113,32 +129,36 @@ set visualbell
 " show the title
 set title
 
-" show the cursor line only in insert mode
+" show the cursor line only in insert mode {{{
 augroup cline
-    au!
-	au winleave,insertenter * set cursorline
-	au WinEnter,InsertLeave * set nocursorline
+    autocmd!
+	autocmd winleave,insertenter * set cursorline
+	autocmd WinEnter,InsertLeave * set nocursorline
 augroup END
+" }}}
 
-" Make sure Vim returns to the same line when you reopen a file.
+" Make sure Vim returns to the same line when you reopen a file. {{{
 augroup line_return
-    au!
-    au BufReadPost *
+    autocmd!
+    autocmd BufReadPost *
         \ if line("'\"") > 0 && line("'\"") <= line("$") |
         \     execute 'normal! g`"zvzz' |
         \ endif
 augroup END
+" }}}
 
-
-" Load local vimrc if present
+" Load local vimrc if present {{{
 if !empty(glob("~/.local.vimrc"))
+	nnoremap <leader>elv :vsplit ~/.local.vimrc<cr>
+	nnoremap <leader>slv :source ~/.local.vimrc<cr>
 	source ~/.local.vimrc
 endif
+" }}}
 
 " make italic comments
 highlight Comment cterm=italic,bold
 
-" debugger options
+" debugger options {{{
 let g:vdebug_options= {
 			\    "port" : 9000,
 			\    "server" : '',
@@ -157,6 +177,8 @@ let g:vdebug_options= {
 			\    "continuous_mode" : 1
 			\}
 
+" }}}
+
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
 	nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
@@ -164,6 +186,15 @@ endif
 
 set lazyredraw
 
-" Mose opions
+" Mouse options {{{
 set mouse=a
 set ttymouse=xterm2
+" }}}
+
+" Vimscript filetype settings {{{
+augroup ft_vim
+	autocmd!
+	autocmd FileType vim setlocal foldlevelstart=0
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
