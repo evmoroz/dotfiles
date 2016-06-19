@@ -179,10 +179,8 @@ let g:vdebug_options= {
 
 " }}}
 
-" Use <C-L> to clear the highlighting of :set hlsearch.
-if maparg('<C-L>', 'n') ==# ''
-	nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
-endif
+" Use double leader to clear the highlighting of :set hlsearch.
+nnoremap <leader><leader> :nohlsearch<cr>
 
 set lazyredraw
 
