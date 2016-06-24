@@ -5,6 +5,8 @@
 ln -sfv $(pwd)/vimrc ${HOME}/.vimrc
 mkdir -vp ${HOME}/.vim/tmp # Create the temporary directory
 ln -sfv $(pwd)/vim/bundle ${HOME}/.vim/bundle # create a shortcut to vim bundle
+git submodule init
+git submodule update
 
 # Link the bashrc
 ln -sfv $(pwd)/bashrc ${HOME}/.bashrc
