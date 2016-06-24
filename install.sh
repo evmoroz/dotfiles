@@ -1,16 +1,10 @@
 #/bin/bash +x
 # dotfiles install script
 
-# Link the Vim configs and install the plugins
+# Link the .vimrc
 ln -sfv $(pwd)/vimrc ${HOME}/.vimrc
-mkdir -vp ${HOME}/.vim/{bundle,tmp}
-if [ ! -d ${HOME}/.vim/bundle/Vundle.vim ] ; then
-	git clone https://github.com/VundleVim/Vundle.vim.git ${HOME}/.vim/bundle/Vundle.vim
-fi
-vim +PluginClean +PluginInstall +qall
-
-# create a shortcut to vim environments
-ln -sfv $(pwd)/env ${HOME}/.vim/env
+mkdir -vp ${HOME}/.vim/tmp # Create the temporary directory
+ln -sfv $(pwd)/vim/bundle ${HOME}/.vim/bundle # create a shortcut to vim bundle
 
 # Link the bashrc
 ln -sfv $(pwd)/bashrc ${HOME}/.bashrc

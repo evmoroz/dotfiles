@@ -17,28 +17,8 @@ set nocompatible
 " Hide the buffers without notifying me
 set hidden
 
-" Vundle {{{
-filetype off
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'mfukar/robotframework-vim'
-" Plugin 'joonty/vdebug'
-Plugin 'fatih/vim-go'
-" Plugin 'joonty/vim-phpunitqf'
-" }}}
-
-call vundle#end()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 filetype plugin indent on
 
 " set the background to dark
