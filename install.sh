@@ -12,6 +12,9 @@ ln -sfv $(pwd)/vim/bundle ${HOME}/.vim/ # create a shortcut to vim bundle
 git submodule init
 git submodule update
 
+# Link the inputrc
+ln -sfv $(pwd)/inputrc ${HOME}/.inputrc
+
 # Link the bashrc
 ln -sfv $(pwd)/bashrc ${HOME}/.bashrc
 
