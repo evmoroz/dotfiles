@@ -6,7 +6,8 @@ ln -sfv $(pwd)/vimrc ${HOME}/.vimrc
 mkdir -vp ${HOME}/.vim/tmp # Create the temporary directory
 # Remove the bundle directory if it exists
 if [ ! -L ${HOME}/.vim/bundle ]; then
-	rm -rvf ${HOME}/.vim/bundle
+	echo Removing ${HOME}/.vim/bundle
+	rm -rf ${HOME}/.vim/bundle
 fi
 ln -sfv $(pwd)/vim/bundle ${HOME}/.vim/ # create a shortcut to vim bundle
 git submodule init
