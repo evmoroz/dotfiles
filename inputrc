@@ -1,3 +1,4 @@
+set editing-mode vi
 # the following line is actually
 # equivalent to "\C-?": delete-char
 "\e[3~": delete-char
@@ -22,6 +23,9 @@
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 set bell-style none
+# set menu-complete-display-prefix on
+# Tab: menu-complete
+# set show-mode-in-prompt on
 
 $if Bash
 
@@ -32,6 +36,8 @@ $if Bash
   set mark-symlinked-directories on
   set match-hidden-files on
   set skip-completed-text on
+  set colored-stats on
+  set completion-prefix-display-length 4
 
   # Append "/" to all dirnames
   #set mark-directories on
