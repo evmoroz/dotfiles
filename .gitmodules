@@ -34,3 +34,6 @@
 [submodule "vim/bundle/vim-env"]
 	path = vim/bundle/vim-env
 	url = https://github.com/ttyz/vim-env.git
+[submodule "vim/bundle/vim-atom-dark"]
+	path = vim/bundle/vim-atom-dark
+	url = https://github.com/gosukiwi/vim-atom-dark.git
