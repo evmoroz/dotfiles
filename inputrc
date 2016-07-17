@@ -1,4 +1,3 @@
-set editing-mode vi
 # the following line is actually
 # equivalent to "\C-?": delete-char
 "\e[3~": delete-char
