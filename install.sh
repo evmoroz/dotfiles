@@ -13,6 +13,8 @@ ln -sfv $(pwd)/vim/bundle ${HOME}/.vim/ # create a shortcut to vim bundle
 git submodule init
 git submodule update
 
+vim +Helptags +quit
+
 # Link the inputrc
 ln -sfv $(pwd)/inputrc ${HOME}/.inputrc
 
