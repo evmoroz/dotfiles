@@ -159,8 +159,14 @@ let g:vdebug_options= {
 
 " }}}
 
+" Mappings {{{
 " Use double leader to clear the highlighting of :set hlsearch.
 nnoremap <leader><leader> :nohlsearch<cr>
+
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [q :cprev<CR>
+nnoremap <leader>cq :cclose<cr>
+" }}}
 
 set lazyredraw
 
@@ -175,4 +181,12 @@ augroup ft_vim
 	autocmd FileType vim setlocal foldlevelstart=0
 	autocmd FileType vim setlocal foldmethod=marker
 augroup END
+" }}}
+
+" Ag grep {{{
+if executable('ag')
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+	command! -nargs=* -complete=file Ag :silent! :grep <args> | :copen | :redraw!
+endif
 " }}}
