@@ -45,4 +45,4 @@
 	url = https://github.com/ervandew/supertab.git
 [submodule "vim/bundle/phpcomplete.vim"]
 	path = vim/bundle/phpcomplete.vim
-	url = git://github.com/shawncplus/phpcomplete.vim.git
+	url = https://github.com/shawncplus/phpcomplete.vim.git
