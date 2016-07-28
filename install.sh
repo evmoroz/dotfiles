@@ -10,6 +10,7 @@ if [ ! -L ${HOME}/.vim/bundle ]; then
 	rm -rf ${HOME}/.vim/bundle
 fi
 ln -sfv $(pwd)/vim/bundle ${HOME}/.vim/ # create a shortcut to vim bundle
+git submodule sync
 git submodule init
 git submodule update
 
