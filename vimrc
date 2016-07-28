@@ -166,6 +166,7 @@ nnoremap <leader><leader> :nohlsearch<cr>
 nnoremap <silent> ]q :cnext<CR>
 nnoremap <silent> [q :cprev<CR>
 nnoremap <leader>cq :cclose<cr>
+nnoremap <leader>oq :copen<cr>
 " }}}
 
 set lazyredraw
@@ -189,4 +190,23 @@ if executable('ag')
     set grepformat=%f:%l:%c%m
 	command! -nargs=* -complete=file Ag :silent! :grep <args> | :copen | :redraw!
 endif
+" }}}
+
+" Syntastic {{{
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_php_phpcs_args='--standard=psr1'
+highlight SyntasticErrorSign ctermfg=red
+highlight SyntasticWraningSign ctermfg=red
+highlight SyntasticStyleWraningSign ctermfg=22
+highlight SyntasticStyleErrorSign ctermfg=yellow
+let g:syntastic_error_symbol = "\u2717"
+let g:syntastic_warning_symbol = "\u26A0"
+let g:syntastic_style_error_symbol = "\u2717"
+let g:syntastic_style_warning_symbol = "\u26A0"
 " }}}
