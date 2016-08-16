@@ -127,14 +127,6 @@ augroup line_return
 augroup END
 " }}}
 
-" Load local vimrc if present {{{
-if !empty(glob("~/.local.vimrc"))
-	nnoremap <leader>elv :vsplit ~/.local.vimrc<cr>
-	nnoremap <leader>slv :source ~/.local.vimrc<cr>
-	source ~/.local.vimrc
-endif
-" }}}
-
 " make italic comments
 highlight Comment cterm=italic,bold
 
@@ -210,3 +202,15 @@ let g:syntastic_warning_symbol = "\u26A0"
 let g:syntastic_style_error_symbol = "\u2717"
 let g:syntastic_style_warning_symbol = "\u26A0"
 " }}}
+
+" Fix crontab editing on OS X
+autocmd filetype crontab setlocal nobackup nowritebackup
+
+" Load local vimrc if present {{{
+if !empty(glob("~/.local.vimrc"))
+	nnoremap <leader>elv :vsplit ~/.local.vimrc<cr>
+	nnoremap <leader>slv :source ~/.local.vimrc<cr>
+	source ~/.local.vimrc
+endif
+" }}}
+
