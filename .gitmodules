@@ -31,9 +31,6 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/bundle/phpcomplete.vim"]
-	path = vim/bundle/phpcomplete.vim
-	url = https://github.com/shawncplus/phpcomplete.vim.git
 [submodule "vim/pack/ttyz/start/vim-atom-dark"]
 	path = vim/pack/ttyz/start/vim-atom-dark
 	url = https://github.com/gosukiwi/vim-atom-dark.git
