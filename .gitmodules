@@ -13,9 +13,6 @@
 [submodule "vim/pack/ttyz/start/supertab"]
 	path = vim/pack/ttyz/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/pack/ttyz/start/syntastic"]
-	path = vim/pack/ttyz/start/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/pack/ttyz/start/vim-commentary"]
 	path = vim/pack/ttyz/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
