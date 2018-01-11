@@ -40,3 +40,6 @@
 [submodule "vim/pack/ttyz/start/vim-atom-dark"]
 	path = vim/pack/ttyz/start/vim-atom-dark
 	url = https://github.com/gosukiwi/vim-atom-dark.git
+[submodule "vim/pack/ttyz/start/ctrlp.vim"]
+	path = vim/pack/ttyz/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
