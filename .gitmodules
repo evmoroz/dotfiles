@@ -34,3 +34,6 @@
 [submodule "vim/pack/ttyz/start/vim-surround"]
 	path = vim/pack/ttyz/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/pack/ttyz/opt/codi.vim"]
+	path = vim/pack/ttyz/opt/codi.vim
+	url = https://github.com/metakirby5/codi.vim.git
