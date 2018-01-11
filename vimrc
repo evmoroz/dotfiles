@@ -205,3 +205,6 @@ command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
 augroup vimrc
 	autocmd QuickFixCmdPost * call asyncrun#quickfix_toggle(8, 1)
 augroup END
+
+" keep gutters open for ale
+let g:ale_sign_column_always = 1
