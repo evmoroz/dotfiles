@@ -187,25 +187,6 @@ if executable('ag')
 endif
 " }}}
 
-" Syntastic {{{
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_php_phpcs_args='--standard=psr1'
-highlight SyntasticErrorSign ctermfg=red
-highlight SyntasticWraningSign ctermfg=red
-highlight SyntasticStyleWraningSign ctermfg=22
-highlight SyntasticStyleErrorSign ctermfg=yellow
-let g:syntastic_error_symbol = "\u2717"
-let g:syntastic_warning_symbol = "\u26A0"
-let g:syntastic_style_error_symbol = "\u2717"
-let g:syntastic_style_warning_symbol = "\u26A0"
-" }}}
-
 " Fix crontab editing on OS X
 autocmd filetype crontab setlocal nobackup nowritebackup
 
@@ -217,3 +198,10 @@ if !empty(glob("~/.local.vimrc"))
 endif
 " }}}
 
+" Befreind fugitive with asyncrun
+command! -bang -nargs=* -complete=file Make AsyncRun -program=make @ <args>
+
+" Autoopen the quickfix
+augroup vimrc
+	autocmd QuickFixCmdPost * call asyncrun#quickfix_toggle(8, 1)
+augroup END
