@@ -43,3 +43,6 @@
 [submodule "vim/pack/ttyz/start/robotframework-vim"]
 	path = vim/pack/ttyz/start/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim.git
+[submodule "vim/pack/ttyz/start/supertab"]
+	path = vim/pack/ttyz/start/supertab
+	url = https://github.com/ervandew/supertab.git
