@@ -40,3 +40,6 @@
 [submodule "vim/pack/ttyz/start/ctrlp.vim"]
 	path = vim/pack/ttyz/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/pack/ttyz/start/phpcomplete.vim"]
+	path = vim/pack/ttyz/start/phpcomplete.vim
+	url = https://github.com/shawncplus/phpcomplete.vim.git
