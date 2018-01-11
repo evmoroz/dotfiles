@@ -16,9 +16,6 @@
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/bundle/vim-env"]
-	path = vim/bundle/vim-env
-	url = https://github.com/ttyz/vim-env.git
 [submodule "vim/pack/ttyz/start/vim-atom-dark"]
 	path = vim/pack/ttyz/start/vim-atom-dark
 	url = https://github.com/gosukiwi/vim-atom-dark.git
