@@ -1,3 +1,4 @@
 .DS_Store
 /vim/pack/local
 /vim/tmp
+/vim/.netrwhist
