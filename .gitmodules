@@ -58,3 +58,6 @@
 [submodule "vim/pack/ttyz/start/vim-fugitive"]
 	path = vim/pack/ttyz/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/ttyz/start/vim-multiple-cursors"]
+	path = vim/pack/ttyz/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
