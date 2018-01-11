@@ -29,3 +29,5 @@ git submodule init
 git submodule add ${pluginurl} ${pluginpath}
 git add .gitmodules ${plugindir}/${pluginname}
 git commit -m "Install plugin: ${pluginname}"
+
+vim +":helptags ${pluginpath}" +":q"
