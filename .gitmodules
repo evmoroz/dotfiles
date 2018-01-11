@@ -37,3 +37,6 @@
 [submodule "vim/pack/ttyz/opt/codi.vim"]
 	path = vim/pack/ttyz/opt/codi.vim
 	url = https://github.com/metakirby5/codi.vim.git
+[submodule "vim/pack/ttyz/start/asyncrun.vim"]
+	path = vim/pack/ttyz/start/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim.git
