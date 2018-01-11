@@ -17,8 +17,6 @@ set nocompatible
 " Hide the buffers without notifying me
 set hidden
 
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
 filetype plugin indent on
 
 " set the background to dark
