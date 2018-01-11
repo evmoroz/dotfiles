@@ -25,9 +25,6 @@
 [submodule "vim/bundle/vim-env"]
 	path = vim/bundle/vim-env
 	url = https://github.com/ttyz/vim-env.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "vim/pack/ttyz/start/vim-atom-dark"]
 	path = vim/pack/ttyz/start/vim-atom-dark
 	url = https://github.com/gosukiwi/vim-atom-dark.git
