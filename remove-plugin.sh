@@ -7,6 +7,7 @@ if [ -z ${plugin} ]; then
 	for pluginname in $(ls ${plugindir}); do
 		echo -e "${pluginname} \e[90m[$(git --git-dir=${plugindir}/${pluginname}/.git remote get-url origin)]\e[0m"
 	done
+	exit 0
 fi
 
 pluginpath="${plugindir}/${plugin}"
