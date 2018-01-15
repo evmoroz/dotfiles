@@ -1,15 +1,14 @@
 #!/bin/sh
 
 execution=start
-eval set -- $(getopt -o "o" --long "opt" -n $0 -- $@)
-while true; do
+while getopts o name; do
 	case "${1}" in
-		-o | --opt) execution=opt; shift;;
-		--) shift; break ;;
+		o) execution=opt;;
 		*) echo Unknown option: ${1}; exit 1
    	esac
 done
 
+shift $(($OPTIND -1))
 
 plugindir="vim/pack/ttyz/${execution}"
 pluginfulldir="$(dirname $0)/${plugindir}"
@@ -24,6 +23,8 @@ fi
 plugin=$(basename $pluginurl)
 pluginname=${plugin%.*}
 pluginpath="${pluginfulldir}/${pluginname}"
+
+echo Installing ${plugin}
 
 git submodule init
 git submodule add ${pluginurl} ${pluginpath}
