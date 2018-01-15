@@ -10,6 +10,13 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap H ^
 nnoremap L $
 
+" Use non-linewise movewment
+nnoremap k gk
+nnoremap j gj
+
+" Save some keystrokes
+nnoremap ; :
+
 " No compatible mode
 set nocompatible
 
