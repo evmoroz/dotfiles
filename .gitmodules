@@ -40,3 +40,6 @@
 [submodule "vim/pack/ttyz/start/ale"]
 	path = vim/pack/ttyz/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vim/pack/ttyz/start/vim-gitgutter"]
+	path = vim/pack/ttyz/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
