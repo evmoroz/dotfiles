@@ -214,4 +214,5 @@ augroup vimrc
 augroup END
 
 " keep gutters open for ale
+let g:ale_php_phpcs_standard = "~/dotfiles/phpcs.xml"
 let g:ale_sign_column_always = 1
