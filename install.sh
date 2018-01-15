@@ -4,7 +4,7 @@
 # Link the .vimrc
 ln -sfv $(pwd)/vimrc ${HOME}/.vimrc
 # Remove the .vim directory if it exists
-if [ ! -L ${HOME}/.vim ]; then
+if [ -d ${HOME}/.vim ]; then
 	echo Removing ${HOME}/.vim
 	rm -rf ${HOME}/.vim
 fi
