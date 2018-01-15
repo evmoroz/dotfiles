@@ -43,3 +43,4 @@
 [submodule "vim/pack/ttyz/start/vim-gitgutter"]
 	path = vim/pack/ttyz/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = untracked
