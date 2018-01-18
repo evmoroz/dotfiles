@@ -2,10 +2,10 @@
 
 execution=start
 path=ttyz
-while getopts ol name; do
+while getopts "ol" name; do
 	case "${1}" in
-		o) execution=opt;;
-		o) path=local;;
+		-o) execution=opt;;
+		-l) path=local;;
 		*) echo Unknown option: ${1}; exit 1
    	esac
 done
