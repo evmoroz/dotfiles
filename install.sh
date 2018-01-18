@@ -1,5 +1,15 @@
 #/bin/bash +x
 # dotfiles install script
+self=$(dirname $0)
+
+# install .config
+if [ ! -d ${HOME}/.config ]; then
+	mkdir ${HOME}/.config
+fi
+
+for file in $(ls ${self}/config/); do
+	ln -sf $(realpath ${self}/config/${file}) ${HOME}/.config
+done
 
 # Link the .vimrc
 ln -sfv $(pwd)/vimrc ${HOME}/.vimrc
