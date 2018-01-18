@@ -1,0 +1,11 @@
+{
+    "require": {
+		"phpmd/phpmd": "*",
+		"pdepend/pdepend": "^2.2",
+        "friendsofphp/php-cs-fixer": "*",
+        "squizlabs/php_codesniffer": "*",
+		"phpunit/phpunit": "*",
+		"whatthejeff/nyancat-phpunit-resultprinter": "~1.2",
+        "psy/psysh": "@stable"
+    }
+}

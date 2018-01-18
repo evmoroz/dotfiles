@@ -2,6 +2,15 @@
 # dotfiles install script
 self=$(dirname $0)
 
+# install composer tools
+
+if [ ! -d ${HOME}/.composer ]; then
+	mkdir ${HOME}/.composer
+fi
+
+ln -svf $(realpath ${self}/composer)/* ${HOME}/.composer
+composer global install
+
 # install .config
 if [ ! -d ${HOME}/.config ]; then
 	mkdir ${HOME}/.config
