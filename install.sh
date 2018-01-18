@@ -11,6 +11,9 @@ fi
 ln -svf $(realpath ${self}/composer)/* ${HOME}/.composer
 composer global install
 
+# install python tools
+cat ${self}/pypack.txt | xargs -n1 pipsi install
+
 # install .config
 if [ ! -d ${HOME}/.config ]; then
 	mkdir ${HOME}/.config
