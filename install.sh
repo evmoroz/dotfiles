@@ -12,6 +12,7 @@ ln -svf $(realpath ${self}/composer)/* ${HOME}/.composer
 composer global install
 
 # install python tools
+ln -svf $(realpath ${self}/pypack.txt) ${HOME}/.config
 cat ${self}/pypack.txt | xargs -n1 pipsi install
 
 # install .config

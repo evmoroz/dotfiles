@@ -59,3 +59,16 @@ HISTCONTROL="erasedups:ignoreboth"
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history"
 HISTTIMEFORMAT='%F %T '
 
+function pipsiupgrade {
+	cat ${HOME}/.config/pypack.txt | xargs -n1 pipsi upgrade
+}
+
+function upgall {
+	if [[ -x "${HOME}/upgrade.sh" ]]; then
+		${HOME}/upgrade.sh
+	fi
+
+	composer global update
+	pipsiupgrade
+
+}
