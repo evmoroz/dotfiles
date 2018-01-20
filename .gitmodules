@@ -45,3 +45,5 @@
 	path = vim/pack/git-plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	ignore = untracked
+[submodule "./vim/pack/git-plugins/opt/codi.vim"]
+	ignore = untracked
