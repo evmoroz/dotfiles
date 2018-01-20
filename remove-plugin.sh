@@ -1,6 +1,6 @@
 #!/bin/bash
 plugin=${1}
-plugindir="$(dirname $0)/vim/pack/ttyz"
+plugindir="$(dirname $0)/vim/pack/git-plugins"
 
 if [ -z ${plugin} ]; then
 	for pluginname in $(ls ${plugindir}/start); do

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 execution=start
-path=ttyz
+path=git-plugins
 while getopts "ol" name; do
 	case "${1}" in
 		-o) execution=opt;;
@@ -32,6 +32,7 @@ if [ "${path}" != "local" ]; then
 	git submodule init
 	git submodule add ${pluginurl} ${pluginpath}
 	git add .gitmodules ${plugindir}/${pluginname}
+	git config -f .gitmodules --replace-all submodule.${pluginpath}.ignore untracked
 	git commit -m "Install plugin: ${pluginname}"
 else
 	git clone ${pluginurl} ${pluginpath}
