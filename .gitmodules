@@ -1,46 +1,46 @@
-[submodule "vim/pack/ttyz/start/vim-atom-dark"]
-	path = vim/pack/ttyz/start/vim-atom-dark
+[submodule "vim/pack/git-plugins/start/vim-atom-dark"]
+	path = vim/pack/git-plugins/start/vim-atom-dark
 	url = https://github.com/gosukiwi/vim-atom-dark.git
-[submodule "vim/pack/ttyz/start/ctrlp.vim"]
-	path = vim/pack/ttyz/start/ctrlp.vim
+[submodule "vim/pack/git-plugins/start/ctrlp.vim"]
+	path = vim/pack/git-plugins/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/pack/ttyz/start/phpcomplete.vim"]
-	path = vim/pack/ttyz/start/phpcomplete.vim
+[submodule "vim/pack/git-plugins/start/phpcomplete.vim"]
+	path = vim/pack/git-plugins/start/phpcomplete.vim
 	url = https://github.com/shawncplus/phpcomplete.vim.git
-[submodule "vim/pack/ttyz/start/robotframework-vim"]
-	path = vim/pack/ttyz/start/robotframework-vim
+[submodule "vim/pack/git-plugins/start/robotframework-vim"]
+	path = vim/pack/git-plugins/start/robotframework-vim
 	url = https://github.com/mfukar/robotframework-vim.git
-[submodule "vim/pack/ttyz/start/supertab"]
-	path = vim/pack/ttyz/start/supertab
+[submodule "vim/pack/git-plugins/start/supertab"]
+	path = vim/pack/git-plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/pack/ttyz/start/vim-commentary"]
-	path = vim/pack/ttyz/start/vim-commentary
+[submodule "vim/pack/git-plugins/start/vim-commentary"]
+	path = vim/pack/git-plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "vim/pack/ttyz/start/vim-env"]
-	path = vim/pack/ttyz/start/vim-env
+[submodule "vim/pack/git-plugins/start/vim-env"]
+	path = vim/pack/git-plugins/start/vim-env
 	url = https://github.com/ttyz/vim-env.git
-[submodule "vim/pack/ttyz/start/vim-fugitive"]
-	path = vim/pack/ttyz/start/vim-fugitive
+[submodule "vim/pack/git-plugins/start/vim-fugitive"]
+	path = vim/pack/git-plugins/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/pack/ttyz/start/vim-multiple-cursors"]
-	path = vim/pack/ttyz/start/vim-multiple-cursors
+[submodule "vim/pack/git-plugins/start/vim-multiple-cursors"]
+	path = vim/pack/git-plugins/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule "vim/pack/ttyz/start/vim-repeat"]
-	path = vim/pack/ttyz/start/vim-repeat
+[submodule "vim/pack/git-plugins/start/vim-repeat"]
+	path = vim/pack/git-plugins/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-[submodule "vim/pack/ttyz/start/vim-surround"]
-	path = vim/pack/ttyz/start/vim-surround
+[submodule "vim/pack/git-plugins/start/vim-surround"]
+	path = vim/pack/git-plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/pack/ttyz/opt/codi.vim"]
-	path = vim/pack/ttyz/opt/codi.vim
+[submodule "vim/pack/git-plugins/opt/codi.vim"]
+	path = vim/pack/git-plugins/opt/codi.vim
 	url = https://github.com/metakirby5/codi.vim.git
-[submodule "vim/pack/ttyz/start/asyncrun.vim"]
-	path = vim/pack/ttyz/start/asyncrun.vim
+[submodule "vim/pack/git-plugins/start/asyncrun.vim"]
+	path = vim/pack/git-plugins/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
-[submodule "vim/pack/ttyz/start/ale"]
-	path = vim/pack/ttyz/start/ale
+[submodule "vim/pack/git-plugins/start/ale"]
+	path = vim/pack/git-plugins/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "vim/pack/ttyz/start/vim-gitgutter"]
-	path = vim/pack/ttyz/start/vim-gitgutter
+[submodule "vim/pack/git-plugins/start/vim-gitgutter"]
+	path = vim/pack/git-plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	ignore = untracked
