@@ -34,6 +34,7 @@
 [submodule "vim/pack/git-plugins/opt/codi.vim"]
 	path = vim/pack/git-plugins/opt/codi.vim
 	url = https://github.com/metakirby5/codi.vim.git
+	ignore = untracked
 [submodule "vim/pack/git-plugins/start/asyncrun.vim"]
 	path = vim/pack/git-plugins/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
