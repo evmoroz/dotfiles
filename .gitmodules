@@ -47,3 +47,13 @@
 	ignore = untracked
 [submodule "./vim/pack/git-plugins/opt/codi.vim"]
 	ignore = untracked
+[submodule "vim/pack/git-plugins/start/vdebug"]
+	path = vim/pack/git-plugins/start/vdebug
+	url = https://github.com/joonty/vdebug.git
+[submodule "./vim/pack/git-plugins/start/vdebug"]
+	ignore = untracked
+[submodule "vim/pack/git-plugins/start/vim-gutentags"]
+	path = vim/pack/git-plugins/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "./vim/pack/git-plugins/start/vim-gutentags"]
+	ignore = untracked
