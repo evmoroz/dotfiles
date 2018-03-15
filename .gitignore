@@ -2,4 +2,4 @@
 /vim/pack/local
 /vim/tmp
 /vim/.netrwhist
-/vim/**/tags
+tags
