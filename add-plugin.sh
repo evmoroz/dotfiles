@@ -39,4 +39,4 @@ else
 	git clone ${pluginurl} ${pluginpath}
 fi
 
-vim +":helptags ${pluginpath}" +":q"
+vim +":helptags ~/.vim" +":q"
