@@ -14,6 +14,7 @@ shift $(($OPTIND -1))
 
 plugindir="vim/pack/${path}/${execution}"
 pluginfulldir="$(dirname $0)/${plugindir}"
+
 cd $(dirname $0)
 pluginurl=${1}
 
@@ -31,8 +32,8 @@ echo Installing ${plugin}
 if [ "${path}" != "local" ]; then
 	git submodule init
 	git submodule add ${pluginurl} ${pluginpath}
-	git config -f .gitmodules --add submodule.${pluginpath}.ignore untracked
-	git add .gitmodules ${plugindir}/${pluginname}
+	git config -f .gitmodules --replace-all submodule.${plugindir}/${pluginname}.ignore untracked
+	git add .gitmodules ${pluginpath}
 	git commit -m "Install plugin: ${pluginname}"
 else
 	git clone ${pluginurl} ${pluginpath}
