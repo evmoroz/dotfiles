@@ -54,3 +54,7 @@
 	path = vim/pack/git-plugins/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons
 	ignore = untracked
+[submodule "vim/pack/git-plugins/start/ctrlp"]
+	path = vim/pack/git-plugins/start/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim
+	ignore = untracked
