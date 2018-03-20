@@ -50,3 +50,7 @@
 	path = vim/pack/git-plugins/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
 	ignore = untracked
+[submodule "vim/pack/git-plugins/start/vim-devicons"]
+	path = vim/pack/git-plugins/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+	ignore = untracked
