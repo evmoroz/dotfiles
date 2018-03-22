@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# echo ⎇ master
+cd $(tmux display-message -p '#{pane_current_path}')
+
+branch=$(git branch | grep \* | cut -d ' ' -f2-)
+if [ -n "${branch}" ]; then
+    echo  ${branch}
+fi

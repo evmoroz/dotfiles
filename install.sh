@@ -20,6 +20,13 @@ if [ ! -d ${HOME}/.config ]; then
 	mkdir ${HOME}/.config
 fi
 
+#install tmux plugins
+if [ -d ${HOME}/.tmux ]; then
+	echo Removing ${HOME}/.tmux
+	rm -rf ${HOME}/.tmux
+fi
+ln -sfv $(pwd)/tmux ${HOME}/.tmux
+
 for file in $(ls ${self}/config/); do
 	ln -sf $(realpath ${self}/config/${file}) ${HOME}/.config
 done

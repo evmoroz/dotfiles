@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+cd $(tmux display-message -p '#{pane_current_path}')
+
+modified=$(git status -s | wc -l)
+if [[ "${modified}" != "0" ]]; then
+    echo " ${modified} "
+fi
