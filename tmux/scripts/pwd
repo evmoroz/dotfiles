@@ -1,5 +1,3 @@
 
 #!/usr/bin/env bash
-cd $(tmux display-message -p '#{pane_current_path}')
-
-pwd | sed "s|^$HOME|~|g" | sed "s:\([^/]\)[^/]*/:\1/:g"
+tmux run 'echo #{pane_current_path}' | sed "s|^$HOME|~|g" | sed "s:\([^/]\)[^/]*/:\1/:g"
