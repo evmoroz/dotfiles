@@ -1,0 +1,11 @@
+- name: Password-Store is cloned
+  git:
+      repo: https://git.zx2c4.com/password-store
+      dest: "{{src_dir}}/password-store"
+  notify: Install Password-Store
+
+- name: pass-otp extension is cloned
+  git:
+      repo: https://github.com/tadfisher/pass-otp
+      dest: "{{src_dir}}/pass-otp"
+  notify: Install pass-otp

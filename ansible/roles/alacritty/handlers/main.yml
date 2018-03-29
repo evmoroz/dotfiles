@@ -1,0 +1,4 @@
+- name: Alacritty Cleanup
+  file:
+      path: "{{src_dir}}/alacritty/target/release"
+      state: absent

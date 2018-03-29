@@ -1,0 +1,41 @@
+- name: Rust is installed
+  command: bash -c 'curl https://sh.rustup.rs -sSf | sh -s -- -y'
+  changed_when: false
+
+- name: Install dependdencies
+  apt:
+      name: "{{ item }}"
+      state: latest
+  with_items:
+      - cmake
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - xclip
+
+- name: Repository is up-tp-date
+  git:
+      repo: 'https://github.com/jwilm/alacritty.git'
+      dest: "{{src_dir}}/alacritty"
+  notify:
+      - Alacritty Cleanup
+
+- meta: flush_handlers
+
+- name: Compile Alacritty
+  command: ~/.cargo/bin/cargo build --release
+  args:
+      chdir: "{{src_dir}}/alacritty"
+      creates: "{{src_dir}}/alacritty/target/release/alacritty"
+
+- name: Install Alacritty
+  copy:
+      src: "{{src_dir}}/alacritty/target/release/alacritty"
+      dest: /usr/local/bin/alacritty
+      mode: u=rwx,g=rx,o=rx
+
+- name: Create shortcut
+  copy:
+      src: "{{src_dir}}/alacritty/Alacritty.desktop"
+      dest: "/usr/share/applications/Alacritty.desktop"
+      remote_src: yes
+

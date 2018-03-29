@@ -2,6 +2,15 @@
 # dotfiles install script
 self=$(dirname $0)
 
+command -v ansible-playbook >/dev/null 2>&1 || {
+    echo >&2 "Installing ansible"
+    sudo apt-add-repository ppa:ansible/ansible
+    sudo apt-get update
+    sudo apt-get install ansible
+}
+
+ansible-playbook -K ${self}/ansible/local.yml
+
 # install composer tools
 
 if [ ! -d ${HOME}/.composer ]; then
@@ -57,8 +66,3 @@ ln -sfv $(pwd)/tmux.conf ${HOME}/.tmux.conf
 
 # Link the wget config
 ln -sfv $(pwd)/wgetrc ${HOME}/.wgetrc
-
-# link mintty if on cygwin
-if [[ $(uname -s) =~ ^CYGWIN* ]] ; then
-	ln -sfv $(pwd)/minttyrc ${HOME}/.minttyrc
-fi
