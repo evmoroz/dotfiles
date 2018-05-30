@@ -1,4 +1,23 @@
 - name: Alacritty Cleanup
   file:
-      path: "{{src_dir}}/alacritty/target/release"
+      path: "{{item}}"
       state: absent
+  with_items:
+      - "{{src_dir}}/alacritty/target/release"
+      - "/usr/share/applications/Alacritty.desktop"
+
+- name: Create shortcut
+  command: "{{item}}"
+  args:
+      chdir: "{{src_dir}}/alacritty"
+      creates: "/usr/share/applications/Alacritty.desktop"
+  with_items:
+      - desktop-file-install alacritty.desktop
+      - update-desktop-database
+
+- name: Install Alacritty
+  copy:
+      src: "{{src_dir}}/alacritty/target/release/alacritty"
+      dest: /usr/local/bin/alacritty
+      mode: u=rwx,g=rx,o=rx
+

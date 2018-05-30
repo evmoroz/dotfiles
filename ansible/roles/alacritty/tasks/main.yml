@@ -26,16 +26,7 @@
   args:
       chdir: "{{src_dir}}/alacritty"
       creates: "{{src_dir}}/alacritty/target/release/alacritty"
-
-- name: Install Alacritty
-  copy:
-      src: "{{src_dir}}/alacritty/target/release/alacritty"
-      dest: /usr/local/bin/alacritty
-      mode: u=rwx,g=rx,o=rx
-
-- name: Create shortcut
-  copy:
-      src: "{{src_dir}}/alacritty/Alacritty.desktop"
-      dest: "/usr/share/applications/Alacritty.desktop"
-      remote_src: yes
+  notify:
+      - Install Alacritty
+      - Create shortcut
 
