@@ -1,0 +1,12 @@
+- name: Repository is up-tp-date
+  become: false
+  git:
+      repo: 'git@gitlab.com:ttyz/funcfun.git'
+      dest: "{{src_dir}}/funcfun"
+
+- name: Ensure funcfun is loaded
+  become: false
+  lineinfile:
+      path: '~/.local.bashrc'
+      line: "source {{src_dir}}/funcfun/funcfun.sh"
+      state: present

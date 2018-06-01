@@ -4,3 +4,4 @@
   roles:
       - alacritty
       - password-store
+      - funcfun
