@@ -34,11 +34,6 @@ export EDITOR="$VISUAL"
 
 export PS1="\n\[\033[38;5;11m\]\u@\h\]\[\033[38;5;15m\] \]\[\033[38;5;208m\][\w]:\]\[\033[38;5;15m\]\n\\$ \[\e[0m\]"
 
-# Load local bashrc if there is one
-if [ -f ${HOME}/.local.bashrc ] ; then
-	source ${HOME}/.local.bashrc
-fi
-
 # Add composer bin to the path if present
 COMPOSER_BIN=${HOME}/.composer/vendor/bin
 if [ -d ${COMPOSER_BIN} ] ; then
@@ -72,3 +67,9 @@ function upgall {
 	pipsiupgrade
 
 }
+
+# Load local bashrc if there is one
+if [ -f ${HOME}/.local.bashrc ] ; then
+	source ${HOME}/.local.bashrc
+fi
+
