@@ -2,6 +2,7 @@
 - hosts: localhost
   become: true
   roles:
+      - browserpass
       - alacritty
       - password-store
       - funcfun

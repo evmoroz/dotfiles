@@ -1,0 +1,15 @@
+- name: Verify browserpass Signature
+  become: no
+  command: gpg --verify browserpass-linux64.zip.sig
+  args:
+      chdir: /tmp
+
+- name: Extract browserpass
+  unarchive:
+      src: /tmp/browserpass-linux64.zip
+      dest: /opt/github/packages/browserpass
+
+- name: Install browserpass
+  command: ./install.sh chrome
+  args:
+      chdir: /opt/github/packages/browserpass

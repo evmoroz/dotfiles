@@ -1,0 +1,37 @@
+- name: github releases dir exists
+  file:
+      path: /opt/github/{{ item }}
+      state: directory
+  with_items:
+      - releases
+      - packages/browserpass
+
+- name: Get package metadata
+  get_url:
+      url: https://api.github.com/repos/browserpass/browserpass/releases/latest
+      dest: /opt/github/releases/browserpath.json
+      mode: 0444
+
+- name: Get current browserpass version
+  command: ./browserpass-linux64 -v
+  args:
+      chdir: /opt/github/packages/browserpass
+  register: browserpass_version
+  changed_when: false
+  ignore_errors: true
+
+- name: Read browserpass release metadata
+  include_vars:
+      file: /opt/github/releases/browserpath.json
+      name: browserpass_release
+
+- name: Download latest browserpass
+  get_url:
+      url: "{{ item.browser_download_url }}"
+      dest: /tmp/
+  when: '"browserpass-linux64.zip" in item.name and browserpass_release.tag_name not in browserpass_version.stdout'
+  with_items: "{{ browserpass_release.assets }}"
+  notify:
+      - Verify browserpass Signature
+      - Extract browserpass
+      - Install browserpass
