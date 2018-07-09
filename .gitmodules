@@ -58,3 +58,7 @@
 	path = vim/pack/git-plugins/start/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim
 	ignore = untracked
+[submodule "vim/pack/git-plugins/start/vim-tmux-focus-events"]
+	path = vim/pack/git-plugins/start/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
+	ignore = untracked
