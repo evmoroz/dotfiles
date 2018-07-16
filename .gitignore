@@ -6,3 +6,4 @@ tags
 tags-*
 /tmux/local
 *.retry
+/composer/composer.lock
