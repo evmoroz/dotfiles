@@ -5,6 +5,7 @@
         "friendsofphp/php-cs-fixer": "*",
         "squizlabs/php_codesniffer": "*",
 		"phpunit/phpunit": "*",
-        "psy/psysh": "@stable"
+        "psy/psysh": "@stable",
+        "hirak/prestissimo": "^0.3.7"
     }
 }
