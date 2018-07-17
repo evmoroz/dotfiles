@@ -62,3 +62,7 @@
 	path = vim/pack/git-plugins/start/vim-tmux-focus-events
 	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
 	ignore = untracked
+[submodule "vim/pack/git-plugins/start/jq"]
+	ignore = untracked
+	path = vim/pack/git-plugins/start/jq
+	url = https://github.com/vito-c/jq.vim
