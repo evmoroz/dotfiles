@@ -8,6 +8,7 @@
       creates: "~/.cargo/bin/cargo-deb"
 
 - name: Repository is up-tp-date
+  become: true
   git:
       repo: 'https://github.com/jwilm/alacritty.git'
       dest: "{{src_dir}}/alacritty"

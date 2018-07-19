@@ -1,0 +1,29 @@
+---
+- stat:
+    path: "{{ bin_dir | default('/usr/local/bin')}}"
+  register: bin_dir_stat
+
+- name: download composer
+  get_url:
+      url: https://getcomposer.org/installer
+      dest: "{{ ansible_env.TMPDIR|default('/tmp') }}/composer-setup.php"
+      checksum: "sha384:{{ lookup('url', 'https://composer.github.io/installer.sig') }}"
+
+- name: install composer
+  become: "{{ not bin_dir_stat.stat.writeable}}"
+  shell: "cat {{ ansible_env.TMPDIR|default('/tmp') }}/composer-setup.php | php -- --install-dir={{ bin_dir | default('/usr/local/bin')}} --filename=composer"
+  args:
+      creates: "{{ bin_dir | default('/usr/local/bin')}}/composer"
+
+- name: create composer dir
+  file:
+      path: "{{ansible_env.HOME}}/.composer"
+      state: directory
+
+- name: install composer.json
+  file:
+      src:  "{{ dotfiles_home }}/composer/composer.json"
+      dest: "{{ansible_env.HOME}}/.composer/composer.json"
+      state: link
+  notify:
+      - Composer global install

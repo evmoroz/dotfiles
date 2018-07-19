@@ -1,0 +1,3 @@
+---
+dotfiles_repo: git@github.com:ttyz/dotfiles.git
+dotfiles_home: "{{ansible_env.HOME}}/dotfiles"

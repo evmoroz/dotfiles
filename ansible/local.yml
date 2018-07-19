@@ -1,6 +1,10 @@
 ---
-- hosts: localhost
-  become: true
+- hosts: phone:remote:pc
+  roles:
+      - composer
+      - dotfiles
+
+- hosts: pc
   roles:
       - browserpass
       - alacritty
