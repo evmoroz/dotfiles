@@ -1,0 +1,12 @@
+---
+- name: Install pipsi
+  pip:
+      extra_args: '--user'
+      name: pipsi
+      state: latest
+
+- name: Install python-packages
+  command: pipsi install {{ "--python " + item.exec if item.exec is defined else "" }} {{ item.name }}
+  args:
+      creates: "{{ ansible_env.HOME }}/.local/venvs/{{ item.name }}"
+  with_items: "{{ python_tools }}"

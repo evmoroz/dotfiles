@@ -1,0 +1,6 @@
+python_tools:
+    - name: awscli
+    - name: hangups
+      exec: python3
+    - name: docker-compose
+
