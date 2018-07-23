@@ -1,4 +1,5 @@
 - name: Install Alacritty
+  become: true
   command: ~/.cargo/bin/cargo deb --install
   args:
       chdir: "{{src_dir}}/alacritty"
