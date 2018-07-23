@@ -4,3 +4,14 @@
       dest: "{{ dotfiles_home}}"
       update: no
 
+- name: create symlinks
+  file:
+      src: "{{ dotfiles_home }}/{{ item }}"
+      dest: "{{ ansible_env.HOME }}/.{{ item }}"
+      state: link
+  with_items:
+      - inputrc
+      - bashrc
+      - tmux.conf
+      - tmux
+      - wgetrc
