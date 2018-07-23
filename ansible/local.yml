@@ -1,8 +1,8 @@
 ---
 - hosts: phone:remote:pc
   roles:
+      - vim
       - composer
-      - dotfiles
 
 - hosts: pc
   roles:

@@ -1,0 +1,3 @@
+---
+- name: Helptags
+  command: "vim  -u NONE -U NONE -N -i NONE -c 'silent! helptags ~/.vim/pack/git-plugins | quit'"

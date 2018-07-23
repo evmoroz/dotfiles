@@ -40,21 +40,6 @@ for file in $(ls ${self}/config/); do
 	ln -sf $(realpath ${self}/config/${file}) ${HOME}/.config
 done
 
-# Link the .vimrc
-ln -sfv $(pwd)/vimrc ${HOME}/.vimrc
-# Remove the .vim directory if it exists
-if [ -d ${HOME}/.vim ]; then
-	echo Removing ${HOME}/.vim
-	rm -rf ${HOME}/.vim
-fi
-ln -sfv $(pwd)/vim ${HOME}/.vim # create a link to .vim
-mkdir -vp ${HOME}/.vim/tmp # Create the temporary directory
-git submodule sync
-git submodule init
-git submodule update
-
-vim +Helptags +quit
-
 # Link the inputrc
 ln -sfv $(pwd)/inputrc ${HOME}/.inputrc
 

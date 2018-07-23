@@ -1,0 +1,43 @@
+---
+vim_plugins:
+    - name: phpcomplete
+      url: https://github.com/shawncplus/phpcomplete.vim.git
+    - name: vim-atom-dark
+      url: https://github.com/gosukiwi/vim-atom-dark.git
+    - name: supertab
+      url: https://github.com/ervandew/supertab.git
+    - name: vim-commentary
+      url: https://github.com/tpope/vim-commentary.git
+    - name: vim-env
+      url: https://github.com/ttyz/vim-env.git
+    - name: vim-fugitive
+      url: https://github.com/tpope/vim-fugitive.git
+    - name: vim-multiple-cursors
+      url: https://github.com/terryma/vim-multiple-cursors.git
+    - name: vim-repeat
+      url: https://github.com/tpope/vim-repeat.git
+    - name: vim-surround
+      url: https://github.com/tpope/vim-surround.git
+    - name: codi.vim
+      url: https://github.com/metakirby5/codi.vim.git
+      start: opt
+    - name: asyncrun.vim
+      url: https://github.com/skywind3000/asyncrun.vim.git
+    - name: ale
+      url: https://github.com/w0rp/ale.git
+    - name: vim-gitgutter
+      url: https://github.com/airblade/vim-gitgutter.git
+    - name: vdebug
+      url: https://github.com/joonty/vdebug.git
+    - name: vim-gutentags
+      url: https://github.com/ludovicchabant/vim-gutentags.git
+    - name: vim-devicons
+      url: https://github.com/ryanoasis/vim-devicons
+    - name: ctrlp
+      url: https://github.com/ctrlpvim/ctrlp.vim
+    - name: vim-tmux-focus-events
+      url: https://github.com/tmux-plugins/vim-tmux-focus-events.git
+    - name: jq
+      url: https://github.com/vito-c/jq.vim
+    - name: neodark.vim
+      url: https://github.com/KeitaNakamura/neodark.vim.git

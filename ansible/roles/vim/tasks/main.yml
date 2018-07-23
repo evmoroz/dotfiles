@@ -1,0 +1,30 @@
+---
+- name: Install vim
+  become: true
+  package:
+      name: vim
+      state: latest
+  when: pkg_manager is not defined
+
+- name: Setup dirs
+  file:
+      path: "{{ ansible_env.HOME }}/.{{ item }}"
+      state: directory
+  with_items:
+      - vim
+      - vim/tmp
+
+- name: Setup syslinks
+  file:
+      src: "{{ dotfiles_home }}/{{ item }}"
+      dest: "{{ ansible_env.HOME }}/.{{ item }}"
+      state: link
+  with_items:
+      - vimrc
+
+- name: Install plugins
+  git:
+      repo: "{{ item.url }}"
+      dest: "{{ ansible_env.HOME }}/.vim/pack/git-plugins/{{ item.start | default('start') }}/{{ item.name }}"
+  with_items: "{{ vim_plugins }}"
+  notify: Helptags
