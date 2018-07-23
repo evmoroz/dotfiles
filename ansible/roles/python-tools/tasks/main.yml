@@ -10,3 +10,17 @@
   args:
       creates: "{{ ansible_env.HOME }}/.local/venvs/{{ item.name }}"
   with_items: "{{ python_tools }}"
+
+- name: Create config folder
+  file:
+      path: "{{ ansible_env.HOME }}/.config"
+      state: directory
+
+- name: Install config
+  file:
+      src: "{{ dotfiles_home }}/config/{{ item }}"
+      dest: "{{ ansible_env.HOME }}/.config/{{ item }}"
+      state: link
+  with_pipe:
+      - "ls {{ dotfiles_home }}/config"
+

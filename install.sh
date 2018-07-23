@@ -6,10 +6,6 @@ self=$(dirname $0)
 #     sudo apt-get update
 #     sudo apt-get install ansible
 
-# install python tools
-ln -svf $(realpath ${self}/pypack.txt) ${HOME}/.config
-cat ${self}/pypack.txt | xargs -n1 pipsi install
-
 # install .config
 if [ ! -d ${HOME}/.config ]; then
 	mkdir ${HOME}/.config
