@@ -1,6 +1,6 @@
 - name: Repository is up-tp-date
-  ignore_errors: yes
   git:
       repo: '{{ dotfiles_repo }}'
       dest: "{{ dotfiles_home}}"
+      update: no
 
