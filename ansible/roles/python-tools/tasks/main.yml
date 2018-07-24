@@ -18,9 +18,9 @@
 
 - name: Install config
   file:
-      src: "{{ dotfiles_home }}/config/{{ item }}"
-      dest: "{{ ansible_env.HOME }}/.config/{{ item }}"
+      src: "{{ dotfiles_home }}/config/{{ item.path }}"
+      dest: "{{ ansible_env.HOME }}/.config/{{ item.path }}"
       state: link
-  with_pipe:
-      - "ls {{ dotfiles_home }}/config"
+  with_filetree: "{{ dotfiles_home }}/config"
+  when: item.state == 'directory'
 
