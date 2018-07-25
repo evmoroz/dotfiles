@@ -52,7 +52,7 @@ set numberwidth=1
 
 " spell check, because I can't type
 set spelllang=en
-set spell
+set nospell
 
 " search options {{{
 set incsearch
@@ -68,6 +68,7 @@ set colorcolumn=120
 set tabstop=4
 set shiftwidth=4
 set smarttab
+set expandtab
 
 set list
 
@@ -167,6 +168,7 @@ nnoremap <leader>oq :copen<cr>
 " }}}
 
 set lazyredraw
+set nowrap
 
 " Mouse options {{{
 set mouse=a
