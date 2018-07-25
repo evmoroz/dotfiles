@@ -3,4 +3,5 @@ python_tools:
     - name: hangups
       exec: python3
     - name: docker-compose
+    - name: Pygments
 
