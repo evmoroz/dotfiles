@@ -5,6 +5,23 @@
       name: pipsi
       state: latest
 
+- name: Get installed packages
+  set_fact:
+      python_tools_installed: "{{ lookup('pipe', 'pipsi list | sed -nr \"s/\\s+Package \\\"(.+)\\\":/\\1/p\"').split() }}"
+
+- name: Remove pacakges
+  command: pipsi uninstall --yes {{ item }}
+  when: not (python_tools | map(attribute='name') | select('eq', item) | list)
+  with_items: "{{ python_tools_installed }}"
+
+- name: Upgrade pacakges
+  command: pipsi upgrade {{ item }}
+  when: python_tools | map(attribute='name') | select('eq', item) | list
+  with_items: "{{ python_tools_installed }}"
+  register: pipsi_out
+  failed_when: false
+  changed_when: 'pipsi_out.rc == 0'
+
 - name: Install python-packages
   command: pipsi install {{ "--python " + item.exec if item.exec is defined else "" }} {{ item.name }}
   args:
