@@ -1,9 +1,11 @@
 - name: Install Password-Store
+  become: true
   command: make install
   args:
       chdir: "{{src_dir}}/password-store"
 
 - name: Install pass-otp
+  become: true
   command: make install
   args:
       chdir: "{{src_dir}}/pass-otp"
