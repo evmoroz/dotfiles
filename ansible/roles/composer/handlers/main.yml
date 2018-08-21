@@ -1,3 +1,4 @@
 ---
 - name: Composer global install
-  command: "{{ bin_dir|default('/usr/local/bin') }}/composer global install"
+  composer:
+      global_command: yes
