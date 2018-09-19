@@ -1,4 +1,5 @@
 {
+    "minimum-stability": "dev",
     "require": {
 		"phpmd/phpmd": "*",
 		"pdepend/pdepend": "*",
@@ -7,6 +8,8 @@
 		"phpunit/phpunit": "*",
         "psy/psysh": "@stable",
         "hirak/prestissimo": "^0.3.7",
-        "phan/phan": "*"
+        "phan/phan": "*",
+        "felixfbecker/language-server": "dev-master",
+        "jetbrains/phpstorm-stubs": "dev-master"
     }
 }
