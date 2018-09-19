@@ -22,21 +22,29 @@
   with_items:
       - vimrc
 
+- name: Get installed plugins
+  become: false
+  set_fact:
+      vim_plugins_installed: "{{ lookup('pipe', 'ls -fd1 {{ ansible_env.HOME }}/.vim/pack/git-plugins/**/* | xargs -n1 basename').split() }}"
+
+- name: Remove opt plugins
+  file:
+      path: "{{ ansible_env.HOME }}/.vim/pack/git-plugins/opt/{{ item }}"
+      state: absent
+  when: not (vim_plugins | map(attribute='name') | select('eq', item) | list)
+  with_items: "{{ vim_plugins_installed  }}"
+
+- name: Remove start plugins
+  file:
+      path: "{{ ansible_env.HOME }}/.vim/pack/git-plugins/start/{{ item }}"
+      state: absent
+  when: not (vim_plugins | map(attribute='name') | select('eq', item) | list)
+  with_items: "{{ vim_plugins_installed  }}"
+
 - name: Install plugins
   git:
       repo: "{{ item.url }}"
       dest: "{{ ansible_env.HOME }}/.vim/pack/git-plugins/{{ item.start | default('start') }}/{{ item.name }}"
   with_items: "{{ vim_plugins }}"
   notify: Helptags
-
-- name: Get installed plugins
-  set_fact:
-      vim_plugins_installed: "{{ lookup('pipe', 'ls -fd1 {{ ansible_env.HOME }}/.vim/pack/git-plugins/**/* | xargs -n1 basename').split() }}"
-
-- name: Remove plugins
-  file:
-      path: "{{ ansible_env.HOME }}/.vim/pack/git-plugins/**/{{ item.name }}"
-      state: absent
-  when: not (vim_plugins | map(attribute='name') | select('eq', item) | list)
-  with_items: "{{ vim_plugins_installed  }}"
 
