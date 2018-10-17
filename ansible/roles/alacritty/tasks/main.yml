@@ -1,9 +1,21 @@
 - name: Rust is installed
+  become: true
   command: bash -c 'curl https://sh.rustup.rs -sSf | sh -s -- -y'
   changed_when: false
 
+- name: Rust is up-to-date
+  become: true
+  command: rustup update
+  changed_when: false
+
+- name: Use Nightly Builds
+  become: true
+  command: rustup override set nightly
+  args:
+      chdir: "{{src_dir}}/alacritty"
+
 - name: Install cargo-deb
-  command: ~/.cargo/bin/cargo install cargo-deb
+  command: ~/.cargo/bin/cargo install --force cargo-deb
   args:
       creates: "~/.cargo/bin/cargo-deb"
 
