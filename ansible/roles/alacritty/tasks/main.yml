@@ -5,12 +5,12 @@
 
 - name: Rust is up-to-date
   become: true
-  command: rustup update
+  command: ~/.cargo/bin/rustup update
   changed_when: false
 
 - name: Use Nightly Builds
   become: true
-  command: rustup override set nightly
+  command: ~/.cargo/bin/rustup override set nightly
   args:
       chdir: "{{src_dir}}/alacritty"
 
