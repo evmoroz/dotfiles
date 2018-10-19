@@ -47,8 +47,6 @@ vim_plugins:
       url: https://github.com/autozimu/LanguageClient-neovim.git
     - name: LanguageClient-php-neovim
       url: https://github.com/roxma/LanguageServer-php-neovim.git
-    - name: deoplete
-      url: https://github.com/Shougo/deoplete.nvim.git
     - name: vim-hug-neovim-rpc
       url: https://github.com/roxma/vim-hug-neovim-rpc.git
     - name: nvim-yarp
