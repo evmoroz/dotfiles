@@ -6,10 +6,11 @@
         "friendsofphp/php-cs-fixer": "*",
         "squizlabs/php_codesniffer": "*",
 		"phpunit/phpunit": "*",
-        "psy/psysh": "@stable",
-        "hirak/prestissimo": "^0.3.7",
-        "phan/phan": "*",
-        "felixfbecker/language-server": "dev-master",
-        "jetbrains/phpstorm-stubs": "dev-master"
+        "psy/psysh": "*",
+        "hirak/prestissimo": "*",
+        "felixfbecker/language-server": "*",
+        "jetbrains/phpstorm-stubs": "*",
+        "vimeo/psalm": "*",
+        "phpstan/phpstan": "*"
     }
 }

@@ -43,11 +43,3 @@ vim_plugins:
       url: https://github.com/LucHermitte/local_vimrc.git
     - name: lh-vim-lib
       url: https://github.com/LucHermitte/lh-vim-lib.git
-    - name: LanguageClient-neovim
-      url: https://github.com/autozimu/LanguageClient-neovim.git
-    - name: LanguageClient-php-neovim
-      url: https://github.com/roxma/LanguageServer-php-neovim.git
-    - name: vim-hug-neovim-rpc
-      url: https://github.com/roxma/vim-hug-neovim-rpc.git
-    - name: nvim-yarp
-      url: https://github.com/roxma/nvim-yarp.git
