@@ -15,6 +15,8 @@ env:
   TERM: xterm-256color-italic
 
 window:
+  start_maximized: true
+  dynamic_padding: true
   # Window dimensions in character columns and lines
   # Falls back to size specified by window manager if set to 0x0.
   # (changes require restart)
@@ -31,7 +33,7 @@ window:
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
-  decorations: false
+  decorations: none
 
 
 # Display tabs using this many cells (changes require restart)
@@ -101,10 +103,6 @@ font:
 
 # Should display the render timer
 render_timer: false
-
-# Use custom cursor colors. If true, display the cursor in the cursor.foreground
-# and cursor.background colors, otherwise invert the colors of the cursor.
-custom_cursor_colors: false
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -178,7 +176,7 @@ visual_bell:
   duration: 200
 
 # Background opacity
-background_opacity: 1.0
+background_opacity: 0.95
 
 # Mouse bindings
 #
@@ -199,6 +197,7 @@ mouse_bindings:
     - { mouse: Middle, action: Paste }
 
 mouse:
+  hide_when_typing: true
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -227,15 +226,13 @@ mouse:
   # scrolling for applications like `man`.
   #
   # To disable this completely, set `faux_scrollback_lines` to 0.
-  faux_scrollback_lines: 1
+  # faux_scrollback_lines: 1
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
   save_to_clipboard: true
 
 dynamic_title: true
-
-hide_cursor_when_typing: false
 
 cursor:
   # Cursor style
@@ -311,6 +308,7 @@ key_bindings:
   - { key: Key0,     mods: Control, action: ResetFontSize                }
   - { key: Equals,   mods: Control, action: IncreaseFontSize             }
   - { key: Subtract, mods: Control, action: DecreaseFontSize             }
+  - { key: L,        mods: Control, action: ClearLogNotice               }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
