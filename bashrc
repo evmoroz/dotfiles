@@ -27,6 +27,7 @@ alias ls='ls --color'
 
 # Use vim insted of vi
 alias vi='vim'
+alias nano='vim'
 
 # set vim as the default editor
 export VISUAL=vim
