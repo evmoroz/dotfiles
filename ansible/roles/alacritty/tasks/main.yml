@@ -5,17 +5,18 @@
 
 - name: Rust is up-to-date
   become: true
-  command: ~/.cargo/bin/rustup update
+  command: /root/.cargo/bin/rustup update
   changed_when: false
 
 - name: Use Nightly Builds
   become: true
-  command: ~/.cargo/bin/rustup override set nightly
+  command: /root/.cargo/bin/rustup override set nightly
   args:
       chdir: "{{src_dir}}/alacritty"
 
 - name: Install cargo-deb
-  command: ~/.cargo/bin/cargo install --force cargo-deb
+  become: true
+  command: /root/.cargo/bin/cargo install --force cargo-deb
   args:
       creates: "~/.cargo/bin/cargo-deb"
 
