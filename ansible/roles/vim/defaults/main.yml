@@ -4,6 +4,7 @@ vim_plugins:
       url: https://github.com/gosukiwi/vim-atom-dark.git
     - name: supertab
       url: https://github.com/ervandew/supertab.git
+      start: opt
     - name: vim-commentary
       url: https://github.com/tpope/vim-commentary.git
     - name: vim-env
@@ -23,12 +24,14 @@ vim_plugins:
       url: https://github.com/skywind3000/asyncrun.vim.git
     - name: ale
       url: https://github.com/w0rp/ale.git
+      start: opt
     - name: vim-gitgutter
       url: https://github.com/airblade/vim-gitgutter.git
     - name: vdebug
       url: https://github.com/joonty/vdebug.git
     - name: vim-gutentags
       url: https://github.com/ludovicchabant/vim-gutentags.git
+      start: opt
     - name: vim-devicons
       url: https://github.com/ryanoasis/vim-devicons
     - name: ctrlp
@@ -43,3 +46,23 @@ vim_plugins:
       url: https://github.com/LucHermitte/local_vimrc.git
     - name: lh-vim-lib
       url: https://github.com/LucHermitte/lh-vim-lib.git
+    - name: async.vim
+      url: https://github.com/prabirshrestha/async.vim.git
+    - name: vim-lsp
+      url: https://github.com/prabirshrestha/vim-lsp.git
+    # - name: deoplete.nvim
+    #   url: https://github.com/Shougo/deoplete.nvim.git
+    # - name: deoplete-vim-lsp
+    #   url: https://github.com/lighttiger2505/deoplete-vim-lsp.git
+    # - name: nvim-yarp
+    #   url: https://github.com/roxma/nvim-yarp.git
+    # - name: vim-hug-neovim-rpc
+    #   url: https://github.com/roxma/vim-hug-neovim-rpc.git
+    - name: asyncomplete.vim
+      url: https://github.com/prabirshrestha/asyncomplete.vim.git
+    - name: asyncomplete-lsp.vim
+      url: https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+    # - name: ncm2-vim-lsp
+    #   url: https://github.com/ncm2/ncm2-vim-lsp.git
+    # - name: ncm2
+    #   url: https://github.com/ncm2/ncm2.git
