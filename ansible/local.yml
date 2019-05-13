@@ -7,7 +7,5 @@
 - hosts: pc
   roles:
       - python-tools
-      - browserpass
-      - alacritty
       - password-store
       - funcfun
