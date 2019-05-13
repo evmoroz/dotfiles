@@ -15,25 +15,25 @@ env:
   TERM: xterm-256color-italic
 
 window:
-  start_maximized: true
-  dynamic_padding: true
-  # Window dimensions in character columns and lines
-  # Falls back to size specified by window manager if set to 0x0.
-  # (changes require restart)
-  dimensions:
-    columns: 80
-    lines: 24
+    startup_mode: Windowed
+    dynamic_padding: true
+    # Window dimensions in character columns and lines
+    # Falls back to size specified by window manager if set to 0x0.
+    # (changes require restart)
+    dimensions:
+        columns: 80
+        lines: 24
 
-  # Adds this many blank pixels of padding around the window
-  # Units are physical pixels; this is not DPI aware.
-  # (change requires restart)
-  padding:
-    x: 2
-    y: 2
+    # Adds this many blank pixels of padding around the window
+    # Units are physical pixels; this is not DPI aware.
+    # (change requires restart)
+    padding:
+        x: 2
+        y: 2
 
-  # Window decorations
-  # Setting this to false will result in window without borders and title bar.
-  decorations: none
+    # Window decorations
+    # Setting this to false will result in window without borders and title bar.
+    decorations: full
 
 
 # Display tabs using this many cells (changes require restart)
@@ -66,19 +66,19 @@ font:
   normal:
     family: Hasklig Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Regular
+    style: Medium
 
   # The bold font face
   bold:
     family: Hasklig Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Bold
+    style: Black
 
   # The italic font face
   italic:
     family: Hasklig Nerd Font Mono # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
-    # style: Italic
+    style: Bold Italic
 
   # Point size of the font
   size: 7
@@ -99,7 +99,7 @@ font:
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # Should display the render timer
 render_timer: false
@@ -197,7 +197,7 @@ mouse_bindings:
     - { mouse: Middle, action: Paste }
 
 mouse:
-  hide_when_typing: true
+  hide_when_typing: false
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
