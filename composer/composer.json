@@ -11,6 +11,7 @@
         "felixfbecker/language-server": "*",
         "jetbrains/phpstorm-stubs": "*",
         "vimeo/psalm": "*",
-        "phpstan/phpstan": "*"
+        "phpstan/phpstan": "*",
+        "phan/phan": "dev-master"
     }
 }
