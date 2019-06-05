@@ -48,21 +48,7 @@ vim_plugins:
       url: https://github.com/LucHermitte/lh-vim-lib.git
     - name: async.vim
       url: https://github.com/prabirshrestha/async.vim.git
-    - name: vim-lsp
-      url: https://github.com/prabirshrestha/vim-lsp.git
-    # - name: deoplete.nvim
-    #   url: https://github.com/Shougo/deoplete.nvim.git
-    # - name: deoplete-vim-lsp
-    #   url: https://github.com/lighttiger2505/deoplete-vim-lsp.git
-    # - name: nvim-yarp
-    #   url: https://github.com/roxma/nvim-yarp.git
-    # - name: vim-hug-neovim-rpc
-    #   url: https://github.com/roxma/vim-hug-neovim-rpc.git
-    - name: asyncomplete.vim
-      url: https://github.com/prabirshrestha/asyncomplete.vim.git
-    - name: asyncomplete-lsp.vim
-      url: https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
-    # - name: ncm2-vim-lsp
-    #   url: https://github.com/ncm2/ncm2-vim-lsp.git
-    # - name: ncm2
-    #   url: https://github.com/ncm2/ncm2.git
+    - name: vim-lsc
+      url: https://github.com/natebosch/vim-lsc.git
+    - name: vim-markdown
+      url: https://github.com/plasticboy/vim-markdown.git
