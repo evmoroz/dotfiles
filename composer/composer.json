@@ -1,17 +1,10 @@
 {
     "minimum-stability": "dev",
     "require": {
-		"phpmd/phpmd": "*",
-		"pdepend/pdepend": "*",
-        "friendsofphp/php-cs-fixer": "*",
-        "squizlabs/php_codesniffer": "*",
-		"phpunit/phpunit": "*",
-        "psy/psysh": "*",
-        "hirak/prestissimo": "*",
-        "felixfbecker/language-server": "*",
-        "jetbrains/phpstorm-stubs": "*",
-        "vimeo/psalm": "*",
-        "phpstan/phpstan": "*",
-        "phan/phan": "dev-master"
+        "phpmd/phpmd": "dev-master",
+        "squizlabs/php_codesniffer": "^3.0@dev",
+        "hirak/prestissimo": "dev-master",
+        "phpdocumentor/phpdocumentor": "dev-master",
+        "pdepend/pdepend": "^2.5"
     }
 }
