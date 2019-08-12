@@ -4,7 +4,10 @@
         "phpmd/phpmd": "dev-master",
         "squizlabs/php_codesniffer": "^3.0@dev",
         "hirak/prestissimo": "dev-master",
-        "phpdocumentor/phpdocumentor": "dev-master",
-        "pdepend/pdepend": "^2.5"
+        "phpdocumentor/phpdocumentor": "^2.9",
+        "pdepend/pdepend": "^2.5",
+        "nelson6e65/phpdoc-vuepress": "^1.0@dev",
+        "cvuorinen/phpdoc-markdown-public": "dev-master",
+        "evert/phpdoc-md": "dev-master"
     }
 }
