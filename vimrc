@@ -172,7 +172,7 @@ set nowrap
 
 " Mouse options {{{
 set mouse=a
-set ttymouse=xterm2
+set ttymouse=sgr
 " }}}
 
 " Vimscript filetype settings {{{
