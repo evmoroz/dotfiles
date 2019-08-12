@@ -63,6 +63,10 @@ function upgall {
 	composer global update
 }
 
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -d ${HOMEBREW_PREFIX}/opt/coreutils && PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
+
 # Load local bashrc if there is one
 if [ -f ${HOME}/.local.bashrc ] ; then
 	source ${HOME}/.local.bashrc
