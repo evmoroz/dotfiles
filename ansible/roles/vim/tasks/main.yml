@@ -21,6 +21,8 @@
       state: link
   with_items:
       - vimrc
+      - vim/coc-settings.json
+      - vim/make.vim
 
 - name: Get installed plugins
   become: false
@@ -44,6 +46,7 @@
 - name: Install plugins
   git:
       repo: "{{ item.url }}"
+      version: "{{ item.branch | default('master') }}"
       dest: "{{ ansible_env.HOME }}/.vim/pack/git-plugins/{{ item.start | default('start') }}/{{ item.name }}"
   with_items: "{{ vim_plugins }}"
   notify: Helptags
