@@ -313,7 +313,9 @@ nmap <leader>r :CocCommand document.renameCurrentWord<CR>
 " use normal command like `<leader>xi(`
 nmap <leader>x  <Plug>(coc-cursors-operator)
 
+let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal = 2
+
 nnoremap <leader>cp :pclose<cr>
 
 let g:neodark#background = '#202020'
