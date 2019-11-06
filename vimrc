@@ -2,6 +2,8 @@
 "
 " 25 Aug 2015. 12:00:16
 
+noremap <LeftRelease> "+y<LeftRelease>
+
 let mapleader=","
 let maplocalleader="\\"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

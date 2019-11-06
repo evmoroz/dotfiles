@@ -42,7 +42,6 @@
         "javascriptreact",
         "typescript",
         "typescriptreact",
-        "php",
         "c"
     ],
     "coc.preferences.formatOnType": true,
