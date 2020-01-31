@@ -12,7 +12,7 @@ env:
   # Note that some xterm terminfo databases don't declare support for italics.
   # You can verify this by checking for the presence of `smso` and `sitm` in
   # `infocmp xterm-256color`.
-  TERM: xterm-256color-italic
+  TERM: xterm-256color
 
 window:
     startup_mode: Windowed
@@ -65,20 +65,24 @@ font:
   # The normal (roman) font face to use.
   normal:
     family: FiraCode Nerd Font
-    style: Medium
+    style: Retina
 
   # The bold font face
   bold:
     family: FiraCode Nerd Font
-    style: Black
+    style: Bold
 
   # The italic font face
   italic:
-    family: FiraCode Nerd Font
+    family: FantasqueSansMono Nerd Font
+    style: Italic
+
+  bold_italic:
+    family: FantasqueSansMono Nerd Font
     style: Bold Italic
 
   # Point size of the font
-  size: 7
+  size: 7.5
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -102,46 +106,46 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x282828'
-    foreground: '0xeaeaea'
+    background: '0x282828' #282828
+    foreground: '0xeaeaea' #eaeaea
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x000000'
-    cursor: '0xffffff'
+    text: '0x000000' #000000
+    cursor: '0xffffff' #ffffff
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
-    white:   '0xffffff'
+    black:   '0x000000' #000000
+    red:     '0xd54e53' #d54e53
+    green:   '0xb9ca4a' #b9ca4a
+    yellow:  '0xe6c547' #e6c547
+    blue:    '0x7aa6da' #7aa6da
+    magenta: '0xc397d8' #c397d8
+    cyan:    '0x70c0ba' #70c0ba
+    white:   '0xffffff' #ffffff
 
   # Bright colors
   bright:
-    black:   '0x666666'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
-    white:   '0xffffff'
+    black:   '0x666666' #666666
+    red:     '0xff3334' #ff3334
+    green:   '0x9ec400' #9ec400
+    yellow:  '0xe7c547' #e7c547
+    blue:    '0x7aa6da' #7aa6da
+    magenta: '0xb77ee0' #b77ee0
+    cyan:    '0x54ced6' #54ced6
+    white:   '0xffffff' #ffffff
 
   # Dim colors (Optional)
   dim:
-    black:   '0x333333'
-    red:     '0xf2777a'
-    green:   '0x99cc99'
-    yellow:  '0xffcc66'
-    blue:    '0x6699cc'
-    magenta: '0xcc99cc'
-    cyan:    '0x66cccc'
-    white:   '0xdddddd'
+    black:   '0x333333' #333333
+    red:     '0xf2777a' #f2777a
+    green:   '0x99cc99' #99cc99
+    yellow:  '0xffcc66' #ffcc66
+    blue:    '0x6699cc' #6699cc
+    magenta: '0xcc99cc' #cc99cc
+    cyan:    '0x66cccc' #66cccc
+    white:   '0xdddddd' #dddddd
 
 # Visual Bell
 #
@@ -171,6 +175,11 @@ visual_bell:
 
 # Background opacity
 background_opacity: 1
+
+shell:
+    program: /usr/bin/tmux
+    args:
+        - "-2"
 
 # Mouse bindings
 #

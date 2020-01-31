@@ -7,6 +7,8 @@
     "diagnostic.warningSign": "",
     "diagnostic.infoSign": "\u2139",
     "diagnostic.hintSign": "\u2691",
+    "eslint.autoFixOnSave": true,
+    "eslint.autoFix": true,
     "suggest.completionItemKindLabels": {
         "keyword": "\uf1de",
         "variable": "\ue79b",
@@ -45,6 +47,7 @@
         "c"
     ],
     "coc.preferences.formatOnType": true,
+    "coc.preferences.jumpCommand": "drop",
     "diagnostic.checkCurrentLine": true,
     "languageserver": {
         "python": {
@@ -122,10 +125,6 @@
             "initializationOptions": {
                 "storagePath": "/tmp/intelephense"
             }
-        },
-        "javascript": {
-            "command": "javascript-typescript-stdio",
-            "filetypes": ["javascript", "typescript"]
         },
         "dockerfile": {
             "command": "docker-langserver",

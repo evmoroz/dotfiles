@@ -4,8 +4,8 @@
 
 noremap <LeftRelease> "+y<LeftRelease>
 
-let mapleader=","
-let maplocalleader="\\"
+let mapleader="\\"
+let maplocalleader="|"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
@@ -245,7 +245,8 @@ endfunction
 
 let g:coc_snippet_next = '<tab>'
 
-inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-p> pumvisible() ? coc#refresh() : "\<c-p>"
+inoremap <silent><expr> <c-n> pumvisible() ? coc#refresh() : "\<c-n>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[c` and `]c` to navigate diagnostics
