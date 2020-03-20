@@ -7,6 +7,7 @@
         "pdepend/pdepend": "^2.5",
         "nelson6e65/phpdoc-vuepress": "^1.0@dev",
         "cvuorinen/phpdoc-markdown-public": "dev-master",
-        "evert/phpdoc-md": "dev-master"
+        "evert/phpdoc-md": "dev-master",
+        "umpirsky/symfony-upgrade-fixer": "^0.1.6"
     }
 }

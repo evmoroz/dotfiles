@@ -64,25 +64,25 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FiraCode Nerd Font
-    style: Retina
+    family: JetBrains Mono
+    style: Regular
 
   # The bold font face
   bold:
-    family: FiraCode Nerd Font
+    family: JetBrains Mono
     style: Bold
 
   # The italic font face
   italic:
-    family: FantasqueSansMono Nerd Font
-    style: Italic
+    family: JetBrains Mono
+    style: Medium Italic
 
   bold_italic:
-    family: FantasqueSansMono Nerd Font
+    family: JetBrains Mono
     style: Bold Italic
 
   # Point size of the font
-  size: 7.5
+  size: 8
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.

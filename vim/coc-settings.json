@@ -47,7 +47,7 @@
         "c"
     ],
     "coc.preferences.formatOnType": true,
-    "coc.preferences.jumpCommand": "drop",
+    "coc.preferences.jumpCommand": "edit",
     "diagnostic.checkCurrentLine": true,
     "languageserver": {
         "python": {
