@@ -245,7 +245,7 @@ bar {
 # default_border pixel
 hide_edge_borders both
 
-bindsym Mod4+l exec i3lock -c 151515
+bindsym Mod4+l exec xscreensaver-command -lock
 exec --no-startup-id slack --startup
 exec --no-startup-id dunst
 exec_always --no-startup-id ~/bg/bg.sh

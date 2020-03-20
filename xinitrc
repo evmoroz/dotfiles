@@ -55,5 +55,5 @@ setxkbmap -option grp_led:scroll
 setxkbmap -option compose:ral
 setxkbmap -option caps:none
 
-xscreensaver -no-splash &
+xscreensaver -no-splash -no-capture-stderr &
 exec i3
