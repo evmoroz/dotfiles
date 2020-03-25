@@ -7,3 +7,4 @@ tags-*
 /tmux/local
 *.retry
 /composer/composer.lock
+/config/coc/extensions/db.json
