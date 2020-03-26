@@ -4,6 +4,17 @@
 #
 #
 
+# XDG
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_LOCAL_HOME=${HOME}/.local
+export XDG_DATA_HOME=${XDG_LOCAL_HOME}/share
+
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export LESSHISTFILE=-
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+
 # bash options
 shopt -s cdspell
 shopt -s extglob
@@ -41,8 +52,8 @@ if [ -d ${COMPOSER_BIN} ] ; then
 	export PATH=${COMPOSER_BIN}:${PATH}
 fi
 
-if [ -d ${HOME}/bin ] ; then
-	export PATH=${HOME}/bin:${PATH}
+if [ -d ${XDG_LOCAL_HOME}/bin ] ; then
+	export PATH=${XDG_LOCAL_HOME}/bin:${PATH}
 fi
 
 # Better history
@@ -56,11 +67,9 @@ export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history"
 HISTTIMEFORMAT='%F %T '
 
 function upgall {
-	if [[ -x "${HOME}/upgrade.sh" ]]; then
-		${HOME}/upgrade.sh
+	if [[ -x "${XDG_LOCAL_HOME}/bin/upgrade.sh" ]]; then
+		${XDG_LOCAL_HOME}/bin/upgrade.sh
 	fi
-
-	composer global update
 }
 
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
@@ -68,7 +77,7 @@ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew
 test -d ${HOMEBREW_PREFIX}/opt/coreutils && PATH="${HOMEBREW_PREFIX}/opt/coreutils/libexec/gnubin:$PATH"
 
 # Load local bashrc if there is one
-if [ -f ${HOME}/.local.bashrc ] ; then
-	source ${HOME}/.local.bashrc
+if [ -f ${XDG_LOCAL_HOME}/bashrc ] ; then
+	source ${XDG_LOCAL_HOME}/bashrc
 fi
 

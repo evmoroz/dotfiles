@@ -204,10 +204,10 @@ endif
 autocmd filetype crontab setlocal nobackup nowritebackup
 
 " Load local vimrc if present {{{
-if !empty(glob("~/.local.vimrc"))
-	nnoremap <leader>elv :vsplit ~/.local.vimrc<cr>
-	nnoremap <leader>slv :source ~/.local.vimrc<cr>
-	source ~/.local.vimrc
+if !empty(glob("~/.local/vimrc"))
+	nnoremap <leader>elv :vsplit ~/.local/vimrc<cr>
+	nnoremap <leader>slv :source ~/.local/vimrc<cr>
+	source ~/.local/vimrc
 endif
 " }}}
 
