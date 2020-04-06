@@ -81,3 +81,9 @@ if [ -f ${XDG_LOCAL_HOME}/bashrc ] ; then
 	source ${XDG_LOCAL_HOME}/bashrc
 fi
 
+
+PATH="/home/emorozov/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/emorozov/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/emorozov/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/emorozov/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/emorozov/perl5"; export PERL_MM_OPT;
