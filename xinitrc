@@ -52,8 +52,11 @@ fi
 xset r rate 250 30
 setxkbmap -option grp:win_space_toggle us,ru
 setxkbmap -option grp_led:scroll
-setxkbmap -option compose:ral
+setxkbmap -option compose:ralt
 setxkbmap -option caps:none
 
+xrdb -merge /home/emorozov/.config/Xresources
+
 xscreensaver -no-splash -no-capture-stderr &
+
 exec i3
