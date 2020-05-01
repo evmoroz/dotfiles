@@ -16,28 +16,28 @@ order += "memory"
 order += "tztime local"
 
 ethernet _first_ {
-    format_up = "%ip"
+    format_up = " %ip"
     format_down = "E: down"
 }
 
 ethernet tun0 {
-    format_up = "VPN: %ip"
+    format_up = " %ip"
     format_down = ""
 }
 
 #cpu_temperature 0 {
-    #format = "%degrees °C"
+    #format = "%degrees °C"
 #}
 
 disk "/" {
-    format = "/: %avail"
+    format = " %avail"
     prefix_type = custom
     low_threshold = 30
     threshold_type = gbytes_avail
 }
 
 disk "/home" {
-    format = "/home: %avail"
+    format = " %avail"
     prefix_type = custom
     low_threshold = 1
     threshold_type = gbytes_avail
