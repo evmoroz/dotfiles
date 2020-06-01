@@ -251,3 +251,5 @@ exec --no-startup-id dunst
 exec_always --no-startup-id ~/bg/bg.sh
 exec_always --no-startup-id xset r rate 250 30
 exec_always --no-startup-id "picom -b -f --vsync"
+
+focus_follows_mouse no
