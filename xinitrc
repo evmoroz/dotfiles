@@ -41,6 +41,9 @@ setxkbmap -option caps:none
 
 xrdb -merge /home/emorozov/.config/Xresources
 
+secret export -n DBUS_SESSION_BUS_ADDRESS
+
+journal-errors -p err &
 xscreensaver -no-splash -no-capture-stderr &
 
 exec i3
