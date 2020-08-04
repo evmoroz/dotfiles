@@ -53,6 +53,7 @@ patch
 picom
 pkgconf
 pkgfile
+powerline
 rdesktop
 restic
 samba
