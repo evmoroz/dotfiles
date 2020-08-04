@@ -58,6 +58,7 @@ python-pip
 radamsa
 remmina
 restic
+rsync
 sed
 sipcalc
 steam
