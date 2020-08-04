@@ -43,7 +43,6 @@ msmtp-mta
 ntfs-3g
 nvidia
 nvidia-settings
-openbsd-netcat
 os-prober
 pacman
 parallel
