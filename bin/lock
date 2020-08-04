@@ -1,0 +1,63 @@
+#!/bin/bash
+
+set -euo pipefail
+
+dir=${TMP_DIR:-/tmp}
+action=lock
+max_retry=3
+wait_time=1
+
+while [ $# -gt 0 ]; do
+    opt=${1}
+    shift 1
+    case "${opt}" in
+        lock|unlock|list) action=${opt};;
+        -d|--lock-dir) dir=${1} && shift 1;;
+        -l|--lock-name) lock_file=${dir}/${1}.lock && name=${1} && shift 1;;
+        --retry) max_retry=${1} && shift 1;;
+        -w|--wait) wait_time=${1} && shift 1;;
+        *) echo "Unexpected option ${opt}" && exit 1;;
+    esac
+done
+
+pid=$(ps -o ppid= -p $$ | tr -d '[:space:]')
+
+function lock_lock {
+    local attempt=0
+    local lock_pid=
+
+    while ! lock_unlock >/dev/null && [ ${attempt} -lt ${max_retry} ]; do
+        attempt=$((attempt+1))
+        logger -t lock -p info "Attempt ${attempt}/${max_retry}. [$lock_file] Locked. waiting for ${wait_time}"
+        sleep $wait_time
+    done
+
+    [ -f "${lock_file}" ] && \
+        logger -t lock -p err "Could not obtain lock ${lock_file}" &&
+        exit 1
+
+    logger -t lock "Process ${pid} obtained lock ${lock_file}"
+    echo ${pid} > ${lock_file}
+}
+
+function lock_unlock {
+    [ ! -f "${lock_file}" ] && return
+    local lock_pid=$(cat ${lock_file})
+
+    [ -n "${lock_pid}" ] && ! kill -0 ${lock_pid} 2>/dev/null && \
+        logger -t lock "Process ${lock_pid} is not running, releasing lock" && \
+        rm ${lock_file} && return
+
+    [ "${pid}" != "${lock_pid}" ] && \
+        echo "${pid} is unable to release lock. Locked by ${lock_pid}" && return 1
+
+    logger -t lock "Lock ${lock_file} released"
+    rm ${lock_file}
+}
+
+function lock_list {
+    ls -1 ${dir}/*.lock | xargs -n1 basename -s .lock
+}
+
+lock_${action}
+
