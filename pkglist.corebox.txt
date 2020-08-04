@@ -59,6 +59,7 @@ radamsa
 remmina
 restic
 rsync
+rsync
 sed
 sipcalc
 steam
