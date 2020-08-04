@@ -52,7 +52,7 @@ fi
 
 echo "fetch dotfiles"
 git -C ${dotfiles_dir} fetch
-git -C ${dotfiles_dir} rebase
+git -C ${dotfiles_dir} rebase || echo "Warning: Please push changes to dotfiles"
 
 if [ -z "${skip_update}" ]; then
     remove_pkg=$(pacman -Qtdq || true)
@@ -64,7 +64,7 @@ if [ -z "${skip_update}" ]; then
     sudo pacman -Syu
 fi
 
-if [ -n "${new_pkg}" ] ; then
+if [ -n "${new_pkg:-}" ] ; then
     file=${dotfiles_dir}/pkglist.txt
     [ -z "${global}" ] && \
         file=pkglist.$(hostname).txt && \
