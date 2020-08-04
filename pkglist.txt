@@ -8,6 +8,7 @@ bash-completion
 bind
 binutils
 bison
+chromium
 cronie
 dhcpcd
 diff-so-fancy
