@@ -82,7 +82,7 @@ if [ -n "${new_pkg}" ] ; then
 fi
 
 echo "install new packages"
-cat ${dotfiles_dir}/pkglist{.$(hostname),}.txt | pacman --needed -S -
+cat ${dotfiles_dir}/pkglist{.$(hostname),}.txt | sudo pacman --needed -S -
 
 echo "Cleanup"
 sudo pacman -Sc
