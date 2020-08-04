@@ -87,3 +87,16 @@ PERL5LIB="/home/emorozov/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5
 PERL_LOCAL_LIB_ROOT="/home/emorozov/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/emorozov/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/emorozov/perl5"; export PERL_MM_OPT;
+
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    while [ -z "$BW_SESSION" ]; do
+        export BW_SESSION=$(bw unlock --raw)
+    done
+
+    secret export -n BW_SESSION
+    bw sync
+
+    echo "Starting X..."
+    exec startx
+fi
+
