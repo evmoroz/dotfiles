@@ -54,6 +54,7 @@ picom
 pkgconf
 pkgfile
 powerline
+powerline
 rdesktop
 restic
 samba
