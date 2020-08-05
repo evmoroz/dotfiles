@@ -55,6 +55,7 @@ pkgconf
 pkgfile
 powerline
 powerline
+rclone
 rdesktop
 restic
 samba
