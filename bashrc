@@ -95,6 +95,7 @@ if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]
 
     secret export -n BW_SESSION
     bw sync
+    eval $(ssh-agent)
 
     echo "Starting X..."
     exec startx
