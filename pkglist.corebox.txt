@@ -1,7 +1,5 @@
 alsa-tools
 amd-ucode
-apache
-bazel
 bc
 bind
 blender

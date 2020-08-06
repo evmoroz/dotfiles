@@ -55,6 +55,7 @@ pkgconf
 pkgfile
 powerline
 powerline
+qemu
 rclone
 rdesktop
 restic
