@@ -3,10 +3,11 @@
     "suggest.timeout": 500,
     "suggest.minTriggerInputLength": 2,
     "codeLens.enable": true,
-    "diagnostic.errorSign": "",
-    "diagnostic.warningSign": "",
-    "diagnostic.infoSign": "\u2139",
-    "diagnostic.hintSign": "\u2691",
+    "diagnostic.errorSign": "🔴",
+    "diagnostic.warningSign": "🌕",
+    "diagnostic.infoSign": "🔵",
+    "diagnostic.hintSign": "💡",
+    "diagnostic.signOffset": 9999999,
     "eslint.autoFixOnSave": true,
     "eslint.autoFix": true,
     "suggest.completionItemKindLabels": {
@@ -155,6 +156,24 @@
             "args": ["start"],
             "filetypes": ["sh"],
             "ignoredRootPaths": ["~"]
+        },
+        "godot": {
+            "host": "127.0.0.1",
+            "filetypes": ["gdscript"],
+            "port": 6008,
+            "trace.server": "verbose"
+        },
+         "haxe": {
+            "command": "node",
+            "args": ["/opt/haxe-language-server/bin/server.js"],
+            "filetypes": ["haxe"],
+            "trace.server": "verbose",
+            "initializationOptions": {
+                "displayArguments": ["--connect", "6000", "build.hxml"]
+            },
+            "settings": {
+                "haxe.executable": "haxe"
+            }
         }
     }
 
