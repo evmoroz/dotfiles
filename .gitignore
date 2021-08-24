@@ -7,4 +7,9 @@ tags-*
 /tmux/local
 *.retry
 /composer/composer.lock
-/config/coc/extensions/db.json
+/config/coc/extensions/*
+!/config/coc/extensions/package.json
+/config/coc/list-*.json
+/config/coc/lists
+/config/coc/commands
+
