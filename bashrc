@@ -52,6 +52,11 @@ if [ -d ${COMPOSER_BIN} ] ; then
 	export PATH=${COMPOSER_BIN}:${PATH}
 fi
 
+XDG_COMPOSER_BIN=${XDG_CONFIG_HOME}/composer/vendor/bin
+if [ -d ${XDG_COMPOSER_BIN} ] ; then
+	export PATH=${XDG_COMPOSER_BIN}:${PATH}
+fi
+
 if [ -d ${XDG_LOCAL_HOME}/bin ] ; then
 	export PATH=${XDG_LOCAL_HOME}/bin:${PATH}
 fi
@@ -81,6 +86,7 @@ if [ -f ${XDG_LOCAL_HOME}/bashrc ] ; then
 	source ${XDG_LOCAL_HOME}/bashrc
 fi
 
+eval "$(oh-my-posh --init --shell bash --config ~/.config/posh.omp.json)"
 
 PATH="/home/emorozov/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/emorozov/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -88,16 +94,24 @@ PERL_LOCAL_LIB_ROOT="/home/emorozov/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LI
 PERL_MB_OPT="--install_base \"/home/emorozov/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/emorozov/perl5"; export PERL_MM_OPT;
 
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-    while [ -z "$BW_SESSION" ]; do
-        export BW_SESSION=$(bw unlock --raw)
-    done
+export BW_SESSION=$(secret-tool lookup var BW_SESSION)
 
-    secret export -n BW_SESSION
-    bw sync
-    eval $(ssh-agent)
+region () {
+    local reg=${1}
+    [ -z "${reg}" ] && \
+        local reg=$((echo default; aws ec2 describe-regions --query 'Regions[].[RegionName]' --output text) | fzf)
+    [ "default" == "${reg}" ] && \
+        eval "unset AWS_REGION" && return
+    [ -z "${reg}" ] && return
+    eval "export AWS_REGION=${reg}"
+}
 
-    echo "Starting X..."
-    exec startx
-fi
-
+prof () {
+    local profile=${1}
+    [ -z "${profile}" ] && \
+        local profile=$(aws configure list-profiles | fzf)
+    [ "default" == "${profile}" ] && \
+        eval "unset AWS_PROFILE" && return
+    [ -z "${profile}" ] && return
+    eval "export AWS_PROFILE=${profile}"
+}
