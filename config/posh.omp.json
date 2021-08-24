@@ -1,0 +1,64 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "segments": [
+        {
+          "type": "exit",
+          "style": "powerline",
+          "background": "#C41",
+          "foreground": "#fff",
+          "powerline_symbol": "\uE0BA",
+          "invert_powerline": true
+        },
+        {
+          "type": "exit",
+          "style": "powerline",
+          "background": "#A30",
+          "foreground": "#fff",
+          "powerline_symbol": "\uE0BA",
+          "invert_powerline": true,
+          "properties": {
+            "always_numeric": true
+          }
+        },
+        {
+          "type": "aws",
+          "style": "powerline",
+          "background": "#333",
+          "powerline_symbol": "\uE0BA",
+          "invert_powerline": true,
+          "foreground": "#666",
+          "properties": {
+            "template": "{{if eq .Profile `default`}}{{.Env.AWS_DEFAULT_PROFILE}}{{else}}{{.Profile}}{{end}}{{if ne .Region .Env.AWS_DEFAULT_REGION}} \uE0BD {{.Region}}{{end}}"
+          }
+        }
+      ],
+      "type":"prompt",
+      "alignment":"right"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#C41"
+        },
+        {
+          "type": "text",
+          "style": "powerline",
+          "foreground": "#666",
+          "properties": {
+            "prefix": " ",
+            "text": "{{if .Root}}#{{else}}${{end}}"
+          }
+        }
+      ]
+    }
+  ],
+  "final_space": false,
+  "osc99": true
+}
