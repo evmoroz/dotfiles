@@ -61,6 +61,13 @@ if [ -d ${XDG_LOCAL_HOME}/bin ] ; then
 	export PATH=${XDG_LOCAL_HOME}/bin:${PATH}
 fi
 
+COMPLETIONS_DIR=${XDG_LOCAL_HOME}/completions
+if [ -d ${COMPLETIONS_DIR} ] ; then
+    for f in ${COMPLETIONS_DIR}/*.bash ; do
+        source $f
+    done
+fi
+
 # Better history
 shopt -s histappend
 shopt -s cmdhist
